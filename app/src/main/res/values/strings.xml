@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">kiosk</string>
+
+    <string name="nav_item_01">nav_item_01</string>
+    <string name="nav_item_02">nav_item_02</string>
+    <string name="nav_item_03">nav_item_03</string>
+    <string name="nav_sub_menu">Sub Menu</string>
+    <string name="nav_sub_menu_item_01">Sub Menu Item 1</string>
+    <string name="nav_sub_menu_item_02">Sub Menu Item 2</string>
+    <string name="drawer_header_text">Drawer Header</string>
 </resources>
