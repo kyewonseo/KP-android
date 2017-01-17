@@ -1,30 +1,11 @@
 <resources>
     <string name="app_name">kiosk</string>
 
-    <!--drawer_header-->
-    <string name="drawer_header_text">Drawer Header</string>
-
-    <!--drawer_list_item-->
     <string name="nav_item_01">nav_item_01</string>
     <string name="nav_item_02">nav_item_02</string>
     <string name="nav_item_03">nav_item_03</string>
     <string name="nav_sub_menu">Sub Menu</string>
     <string name="nav_sub_menu_item_01">Sub Menu Item 1</string>
     <string name="nav_sub_menu_item_02">Sub Menu Item 2</string>
-
-    <!--content_main-->
-    <string name="content_main_notice_title">notice</string>
-    <string name="content_main_notice_text">special event 2017. bread 1+1</string>
-    <string name="content_main_mobile_order_title">Mobile order</string>
-    <string name="context_main_mobile_order_text">Click to start ordering</string>
-    <string name="content_main_recent_menu_title">Recent menu</string>
-    <string name="content_main_recent_menu_text_01">Dark Mocha</string>
-    <string name="content_main_recent_menu_text_02">Cappuccino</string>
-    <string name="content_main_recent_menu_text_03">Cold Brew</string>
-    <string name="content_main_recent_menu_text_04">Mango \n
-        Banana</string>
-    <string name="content_main_coupon_title">Coupon</string>
-    <string name="content_main_Membership_title">Membership</string>
-
-
+    <string name="drawer_header_text">Drawer Header</string>
 </resources>
