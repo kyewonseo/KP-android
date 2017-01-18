@@ -41,14 +41,13 @@
         android:background="@color/green">
 
         <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carouselView"
+            android:id="@+id/carousel_view"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            app:fillColor="#FFFFFFFF"
-            app:pageColor="#00000000"
+            app:fillColor="@color/white"
+            app:pageColor="@color/homeBg"
             app:radius="6dp"
-            app:slideInterval="3000"
-            app:strokeColor="#FF777777"
+            app:strokeColor="@color/gray"
             app:strokeWidth="1dp"/>
     </LinearLayout>
 
@@ -110,12 +109,11 @@
             android:layout_height="170dp"
             android:orientation="horizontal">
 
-            <ListView
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/recent_menu_list"
+                android:scrollbars="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </ListView>
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </LinearLayout>
