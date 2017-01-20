@@ -9,45 +9,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:orientation="horizontal"
-        android:background="@color/gray">
+        android:background="@color/color_03">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_gravity="top|center_vertical"
+            android:layout_height="match_parent"
             android:text="@string/content_main_notice_title"
-            android:textSize="20dp"
-            android:textColor="@color/white"/>
+            style="@style/main_notice_txt_01" />
 
         <!--서버에서 받아온 텍스트로 대체 예정-->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/content_main_notice_text"
-            android:textSize="20dp"/>
+            style="@style/main_notice_txt_01"/>
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/green">
+        android:layout_height="187dp"
+        android:orientation="vertical">
 
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/carousel_view"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            app:fillColor="@color/white"
-            app:pageColor="@color/homeBg"
-            app:radius="6dp"
-            app:strokeColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fillColor="@color/color_01"
+            app:pageColor="@color/color_03"
+            app:radius="5dp"
             app:strokeWidth="1dp"/>
     </LinearLayout>
 
@@ -59,17 +52,13 @@
         <ImageView
             android:id="@+id/order_btn"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_gravity="center"
-            android:background="@color/colorAccent" />
+            android:layout_height="59.5dp"
+            android:background="@drawable/btn_main_m_o_nor" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
             android:layout_alignBottom="@id/order_btn"
             android:layout_alignLeft="@id/order_btn"
             android:layout_alignRight="@id/order_btn"
@@ -78,15 +67,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|center_horizontal"
                 android:text="@string/content_main_mobile_order_title"
-                android:textSize="20dp"/>
+                style="@style/main_mobile_order_txt_01"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|center_horizontal"
                 android:text="@string/context_main_mobile_order_text"
-                android:textSize="15dp"/>
+                style="@style/main_mobile_order_txt_02"/>
 
         </LinearLayout>
 
@@ -96,13 +83,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/white">
+        android:background="@drawable/bg_roundbox_noline_white">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/content_main_recent_menu_title"
-            android:textSize="20dp"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_main_recent_menu_title"
+                style="@style/main_recent_menu_title"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_arrow_01_nor"
+                style="@style/main_recent_menu_title_btn"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

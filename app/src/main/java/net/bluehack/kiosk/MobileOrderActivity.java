@@ -9,6 +9,7 @@ public class MobileOrderActivity extends AppCompatActivity {
 
     private Context context;
 
+    public MobileOrderActivity(){}
     public MobileOrderActivity(Context context) {
         this.context = context;
     }

@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">kiosk</string>
+    <string name="app_name">KIOSK CAFE</string>
 
     <!--drawer_header-->
-    <string name="drawer_header_text">Drawer Header</string>
+    <string name="drawer_header_txt_01">WELCOME</string>
+    <string name="drawer_header_txt_02">KIOSK CAFE</string>
 
     <!--drawer_list_item-->
-    <string name="nav_item_01">nav_item_01</string>
-    <string name="nav_item_02">nav_item_02</string>
-    <string name="nav_item_03">nav_item_03</string>
-    <string name="nav_sub_menu">Sub Menu</string>
-    <string name="nav_sub_menu_item_01">Sub Menu Item 1</string>
-    <string name="nav_sub_menu_item_02">Sub Menu Item 2</string>
+    <string name="nav_item_01">Store</string>
+    <string name="nav_item_02">Notice</string>
+    <string name="nav_item_03">Info</string>
+    <string name="nav_item_04">Setting</string>
+    <string name="nav_item_05">F&amp;Q</string>
 
     <!--content_main-->
     <string name="content_main_notice_title">notice</string>

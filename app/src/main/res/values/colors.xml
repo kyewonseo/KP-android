@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="homeBg">#FF778899</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="gray">#424246</color>
     <color name="green">#FF008000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="homeBg">#36373c</color>
+
+    <!--application theme-->
+    <color name="theme_color_01">#313236</color>
+
+    <color name="color_01">#f3f3f3</color>
+    <color name="color_02">#ffffff</color>
+    <color name="color_03">#424246</color>
+    <color name="color_04">#313131</color>
+    <color name="color_05">#e94d50</color>
+    <color name="color_06">#cdc5c5</color>
+    <color name="color_07">#a3a3a3</color>
+
+    <!--underline-->
+    <color name="underline_01">#e5e5e5</color>
+
+
+
 </resources>

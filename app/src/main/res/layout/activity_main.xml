@@ -14,8 +14,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+            android:gravity="center|center_horizontal"
+            android:background="@color/theme_color_01"/>
 
     </RelativeLayout>
 
@@ -23,10 +23,10 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
+        android:layout_width="226dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/drawer_list_item"/>
+        app:menu="@menu/drawer_list_item" />
 
 </android.support.v4.widget.DrawerLayout>

@@ -2,10 +2,79 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--drawer_header-->
+    <style name="drawer_header_txt_01">
+        <item name="android:textColor">@color/color_05</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    <style name="drawer_header_txt_02">
+        <item name="android:textColor">@color/color_05</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--drawer_list_item-->
+    <style name="drawer_list_item">
+        <item name="android:textColor">@color/color_04</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">24.5dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">18dp</item>
+    </style>
+
+    <!--content_main-->
+    <style name="main_notice_txt_01">
+        <item name="android:textColor">@color/color_06</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="main_notice_txt_02">
+        <item name="android:textColor">@color/color_07</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">11dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="main_mobile_order_txt_01">
+        <item name="android:textColor">@color/color_02</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:paddingLeft">123.5dp</item>
+        <item name="android:paddingRight">123dp</item>
+        <item name="android:paddingTop">9dp</item>
+    </style>
+    <style name="main_mobile_order_txt_02">
+        <item name="android:textColor">@color/color_02</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:paddingLeft">125dp</item>
+        <item name="android:paddingRight">124dp</item>
+        <item name="android:paddingBottom">11.5dp</item>
+    </style>
+    <style name="main_recent_menu_title">
+        <item name="android:textColor">@color/color_04</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">19.5dp</item>
+        <item name="android:paddingRight">208.5dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">11.5dp</item>
+    </style>
+    <style name="main_recent_menu_title_btn">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:paddingRight">13.5dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
 </resources>

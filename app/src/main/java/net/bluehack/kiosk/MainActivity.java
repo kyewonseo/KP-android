@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_drawer);
+        actionBar.setHomeAsUpIndicator(R.drawable.btn_main_menu_nor);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         orderBtn = (ImageView) findViewById(R.id.order_btn);
@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
-                    case R.id.nav_sub_menu_item_01:
+                    case R.id.nav_item_04:
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
-                    case R.id.nav_sub_menu_item_02:
+                    case R.id.nav_item_05:
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
