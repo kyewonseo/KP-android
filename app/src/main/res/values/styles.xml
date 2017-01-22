@@ -77,4 +77,10 @@
         <item name="android:paddingTop">12dp</item>
         <item name="android:paddingBottom">12dp</item>
     </style>
+    <style name="main_bottom_btn_txt">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">19.5dp</item>
+        <item name="android:paddingTop">27.5dp</item>
+        <item name="android:paddingBottom">28dp</item>
+    </style>
 </resources>

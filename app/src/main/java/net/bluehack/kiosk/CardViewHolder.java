@@ -8,10 +8,10 @@ import android.widget.TextView;
 
 public class CardViewHolder extends RecyclerView.ViewHolder {
 
-    private CardView cardView;
-    private ImageView imageView;
-    private TextView title;
-    private TextView kind;
+    CardView cardView;
+    ImageView imageView;
+    TextView title;
+    TextView kind;
 
     public CardViewHolder(View itemView) {
         super(itemView);

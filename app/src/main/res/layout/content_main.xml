@@ -82,13 +82,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/bg_roundbox_noline_white">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_roundbox_noline_white">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,6 +97,7 @@
                 style="@style/main_recent_menu_title"/>
 
             <ImageView
+                android:id="@+id/recent_menu_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/btn_arrow_01_nor"
@@ -105,70 +106,199 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_roundbox_half_gray">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingTop="13.5dp"
+                android:paddingBottom="25.5dp">
+
+                <ImageView
+                    android:id="@+id/recent_menu_img_01"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+
+                <TextView
+                    android:id="@+id/recent_menu_title_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="Dark Mocha\nFrappuccino" />
+
+                <TextView
+                    android:id="@+id/recent_menu_kind_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="ice" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingTop="13.5dp"
+                android:paddingBottom="25.5dp">
+
+                <ImageView
+                    android:id="@+id/recent_menu_img_02"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+
+                <TextView
+                    android:id="@+id/recent_menu_title_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="Dark Mocha\nFrappuccino" />
+
+                <TextView
+                    android:id="@+id/recent_menu_kind_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="ice" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingTop="13.5dp"
+                android:paddingBottom="25.5dp">
+
+                <ImageView
+                    android:id="@+id/recent_menu_img_03"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+
+                <TextView
+                    android:id="@+id/recent_menu_title_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="Dark Mocha\nFrappuccino" />
+
+                <TextView
+                    android:id="@+id/recent_menu_kind_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="ice" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingTop="13.5dp"
+                android:paddingBottom="25.5dp">
+
+                <ImageView
+                    android:id="@+id/recent_menu_img_04"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+
+                <TextView
+                    android:id="@+id/recent_menu_title_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="Dark Mocha\nFrappuccino" />
+
+                <TextView
+                    android:id="@+id/recent_menu_kind_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="ice" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="153.5dp"
             android:orientation="horizontal">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recent_menu_list"
-                android:scrollbars="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_roundbox_half_gray"/>
+        </RelativeLayout>-->
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="2dp"
+        android:layout_height="76dp"
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/coupon_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="2dp"
-                android:background="@color/white" />
+                android:background="@drawable/bg_roundbox_white" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|center_horizontal"
                 android:layout_alignBottom="@id/coupon_btn"
                 android:layout_alignLeft="@id/coupon_btn"
                 android:layout_alignRight="@id/coupon_btn"
                 android:layout_alignTop="@id/coupon_btn"
                 android:text="@string/content_main_coupon_title"
-                android:textSize="20dp"/>
+                android:textSize="14dp"
+                style="@style/main_bottom_btn_txt"/>
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/Membership_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="2dp"
-                android:background="@color/white" />
+                android:background="@drawable/bg_roundbox_white" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|center_horizontal"
                 android:layout_alignBottom="@id/Membership_btn"
                 android:layout_alignLeft="@id/Membership_btn"
                 android:layout_alignRight="@id/Membership_btn"
                 android:layout_alignTop="@id/Membership_btn"
                 android:text="@string/content_main_Membership_title"
-                android:textSize="20dp"/>
+                android:textSize="14dp"
+                style="@style/main_bottom_btn_txt"/>
         </RelativeLayout>
 
     </LinearLayout>

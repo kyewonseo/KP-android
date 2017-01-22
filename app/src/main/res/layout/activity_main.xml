@@ -14,8 +14,31 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:gravity="center|center_horizontal"
             android:background="@color/theme_color_01"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tool_bar"
+            android:textSize="15dp"
+            android:textColor="@color/color_02"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignLeft="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:gravity="center|center_horizontal"/>
+
+        <ImageView
+            android:id="@+id/push_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:paddingRight="8.5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/btn_main_alarm_nor"/>
 
     </RelativeLayout>
 

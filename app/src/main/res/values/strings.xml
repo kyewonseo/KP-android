@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">KIOSK CAFE</string>
+    <string name="app_name"></string>
+
+    <string name="tool_bar">KIOSK CAFE</string>
 
     <!--drawer_header-->
     <string name="drawer_header_txt_01">WELCOME</string>

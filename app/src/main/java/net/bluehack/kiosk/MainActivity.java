@@ -20,19 +20,31 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.amazonaws.mobileconnectors.apigateway.ApiRequest;
+import com.amazonaws.mobileconnectors.apigateway.ApiResponse;
+import com.amazonaws.mobileconnectors.apigateway.annotation.Parameter;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 import com.synnapps.carouselview.ViewListener;
 
+import net.bluehack.kiosk.api.ApiClient;
+import net.bluehack.kiosk.model.Result;
+import net.bluehack.kiosk.model.SideMenu;
+
 import java.util.ArrayList;
+
+import static net.bluehack.kiosk.util.Logger.LOGD;
+import static net.bluehack.kiosk.util.Logger.LOGE;
+import static net.bluehack.kiosk.util.Logger.makeLogTag;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = makeLogTag(MainActivity.class);
     private Context context;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private CarouselView carouselView;
-    private int[] carouselImgs = {R.drawable.earth, R.drawable.mars, R.drawable.mercury, R.drawable.neptune};
+    private int[] carouselImgs = {R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion};
 
     private RecyclerView recyclerView;
     private CardAdapter cardAdapter;
@@ -53,16 +65,13 @@ public class MainActivity extends AppCompatActivity {
         orderBtn = (ImageView) findViewById(R.id.order_btn);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         carouselView = (CarouselView) findViewById(R.id.carousel_view);
-        recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
-        recyclerView.setHasFixedSize(true);
-
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        //TODO: 서버에서 받아 올 cardItemList
-        String[] cardItemList = {"itemList01","itemList02"};
-        cardAdapter = new CardAdapter(context, cardItemList);
-        recyclerView.setAdapter(cardAdapter);
+//        recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
+//        recyclerView.setHasFixedSize(true);
+//        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+//        recyclerView.setLayoutManager(layoutManager);
+//
+//        cardAdapter = new CardAdapter(context);
+//        recyclerView.setAdapter(cardAdapter);
 
         carouselView.setPageCount(carouselImgs.length);
         carouselView.setSlideInterval(2000);
@@ -125,13 +134,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /** 알람 메시지 표시 자리 */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -142,8 +144,6 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
-                return true;
-            case R.id.push_alarm:
                 return true;
         }
 
