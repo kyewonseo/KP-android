@@ -42,7 +42,7 @@
 
     </RelativeLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_process" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"

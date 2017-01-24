@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="?attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/store_recommend_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_05">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/store_recommend_title"
+            android:layout_alignLeft="@id/store_recommend_title"
+            android:layout_alignRight="@id/store_recommend_title"
+            android:layout_alignTop="@id/store_recommend_title"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="4dp"
+            android:text="@string/store_recommend_title"
+            android:textColor="@color/color_02"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/store_recommend_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_02" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/store_near_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/color_08">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/store_near_title"
+                android:layout_alignLeft="@id/store_near_title"
+                android:layout_alignRight="@id/store_near_title"
+                android:layout_alignTop="@id/store_near_title"
+                android:paddingBottom="5.5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="4dp"
+                android:text="@string/store_recommend_title"
+                android:textColor="@color/color_02"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/store_near_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_02" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

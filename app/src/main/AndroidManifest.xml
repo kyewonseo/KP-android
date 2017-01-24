@@ -11,6 +11,7 @@
         android:name=".ApplicationLoader"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_title"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -24,11 +25,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".MobileOrderActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
     </application>
 
 </manifest>

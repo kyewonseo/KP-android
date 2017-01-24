@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/option_order_title_menu_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_12">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/option_order_title_menu_01"
+            android:layout_alignLeft="@id/option_order_title_menu_01"
+            android:layout_alignTop="@id/option_order_title_menu_01"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="4dp"
+            android:text="@string/option_order_title_01"
+            android:textColor="@color/color_13"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/btn_menu_sample_02_big" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10.5dp"
+                android:paddingTop="18.5dp">
+
+                <TextView
+                    android:id="@+id/option_order_menu_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_order_menu_name"
+                    android:textColor="@color/color_04"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/option_order_menu_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pay_order_price"
+                            android:textColor="@color/color_14"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7.5dp"
+                        android:gravity="left|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/option_order_menu_count_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_num_plus_nor" />
+
+                        <TextView
+                            android:id="@+id/option_order_menu_count_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginRight="14dp"
+                            android:text="@string/pay_order_menu_count" />
+
+                        <ImageButton
+                            android:id="@+id/option_order_menu_count_minus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_num_minus_nor" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/option_order_title_menu_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_12">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/option_order_title_menu_02"
+            android:layout_alignLeft="@id/option_order_title_menu_02"
+            android:layout_alignTop="@id/option_order_title_menu_02"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="4dp"
+            android:text="@string/option_order_title_02"
+            android:textColor="@color/color_13"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="left|center">
+
+                <RadioButton
+                    android:id="@+id/btn_option_order_type_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_item"
+                    android:checked="true"/>
+
+                <TextView
+                    android:id="@+id/txt_option_order_type_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_option_order_type_hot"
+                    android:textColor="@color/color_05"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="left|center">
+
+                <RadioButton
+                    android:id="@+id/btn_option_order_type_ice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_item"
+                    android:checked="false"/>
+
+                <TextView
+                    android:id="@+id/txt_option_order_type_ice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_option_order_type_ice"
+                    android:textColor="@color/color_18"/>
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/option_order_title_menu_03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_12">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/option_order_title_menu_03"
+            android:layout_alignLeft="@id/option_order_title_menu_03"
+            android:layout_alignTop="@id/option_order_title_menu_03"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="4dp"
+            android:text="@string/option_order_title_03"
+            android:textColor="@color/color_13"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="133.5dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="left|center">
+
+                <RadioButton
+                    android:id="@+id/btn_option_order_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_item"
+                    android:checked="true"/>
+
+                <TextView
+                    android:id="@+id/txt_option_order_size_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_option_order_size_small"
+                    android:textColor="@color/color_05"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="left|center">
+
+                <RadioButton
+                    android:id="@+id/btn_option_order_size_mediuam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_item"
+                    android:checked="false"/>
+
+                <TextView
+                    android:id="@+id/txt_option_order_size_mediuam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_option_order_size_mediuam"
+                    android:textColor="@color/color_18"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="left|center">
+
+                <RadioButton
+                    android:id="@+id/btn_option_order_size_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_item"
+                    android:checked="false"/>
+
+                <TextView
+                    android:id="@+id/txt_option_order_size_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_option_order_size_large"
+                    android:textColor="@color/color_18"/>
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@color/color_21"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_option_order_put"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_05" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/btn_option_order_put"
+                android:layout_alignLeft="@id/btn_option_order_put"
+                android:layout_alignRight="@id/btn_option_order_put"
+                android:layout_alignTop="@id/btn_option_order_put"
+                android:text="@string/txt_option_order_put"
+                android:textSize="15sp"
+                android:textColor="@color/color_02"
+                android:gravity="center|center_horizontal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_option_order_now"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_05" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/btn_option_order_now"
+                android:layout_alignLeft="@id/btn_option_order_now"
+                android:layout_alignRight="@id/btn_option_order_now"
+                android:layout_alignTop="@id/btn_option_order_now"
+                android:text="@string/txt_option_order_now"
+                android:textSize="15sp"
+                android:textColor="@color/color_02"
+                android:gravity="center|center_horizontal"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
