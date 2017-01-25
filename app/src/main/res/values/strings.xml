@@ -1,3 +1,89 @@
 <resources>
-    <string name="app_name">kiosk</string>
+    <string name="app_name"></string>
+    <string name="app_title">kiosk</string>
+
+    <!--tool_bar_name-->
+    <string name="tool_bar_main">KIOSK CAFE</string>
+    <string name="tool_bar_store">STORE</string>
+    <string name="tool_bar_order">MOBILE ORDER</string>
+    <string name="tool_bar_order_pay">PAYMENT</string>
+    <string name="tool_bar_order_option">ORDER</string>
+
+    <!--drawer_header-->
+    <string name="drawer_header_txt_01">WELCOME</string>
+    <string name="drawer_header_txt_02">KIOSK CAFE</string>
+
+    <!--drawer_list_item-->
+    <string name="nav_item_01">Store</string>
+    <string name="nav_item_02">Notice</string>
+    <string name="nav_item_03">Info</string>
+    <string name="nav_item_04">Setting</string>
+    <string name="nav_item_05">F&amp;Q</string>
+
+    <!--content_main-->
+    <string name="content_main_notice_title">notice</string>
+    <string name="content_main_notice_text">special event 2017. bread 1+1</string>
+    <string name="content_main_mobile_order_title">Mobile order</string>
+    <string name="context_main_mobile_order_text">Click to start ordering</string>
+    <string name="content_main_recent_menu_title">Recent menu</string>
+    <string name="content_main_recent_menu_text_01">Dark Mocha</string>
+    <string name="content_main_recent_menu_text_02">Cappuccino</string>
+    <string name="content_main_recent_menu_text_03">Cold Brew</string>
+    <string name="content_main_recent_menu_text_04">Mango \n
+        Banana</string>
+    <string name="content_main_coupon_title">Coupon</string>
+    <string name="content_main_Membership_title">Membership</string>
+
+    <!--kiosk-store-->
+    <string name="store_recommend_title">추천 매장</string>
+
+    <!--kiosk order-->
+    <string name="order_map_name">정자점</string>
+    <string name="order_map_name_hint">(현재 설정매정)</string>
+    <string name="order_map_btn">변경</string>
+
+    <!--kiosk order pay-->
+    <string name="pay_order_title_01">주문메뉴</string>
+    <string name="pay_order_title_02">주문매장</string>
+    <string name="pay_order_title_03">쿠폰</string>
+    <string name="pay_order_title_04">결제수단</string>
+    <string name="pay_order_title_05">상세내역</string>
+    <string name="pay_order_title_06">결제</string>
+    <string name="pay_order_menu_name">Cold Brew</string>
+    <string name="pay_order_menu_heat">Hot</string>
+    <string name="pay_order_menu_slash">/</string>
+    <string name="pay_order_menu_size">Small</string>
+    <string name="pay_order_menu_price">5,000</string>
+    <string name="pay_order_menu_price_unit">KRW</string>
+    <string name="pay_order_menu_count">1</string>
+    <string name="pay_order_place_distance">623 m</string>
+    <string name="pay_order_place_address">경기도 성남시 분당구 정자일로 166,SPG센터 (정자동)</string>
+    <string name="pay_order_kind_paypal">Paypal</string>
+    <string name="pay_order_kind_card">신용카드</string>
+    <string name="pay_order_details">상세내역</string>
+    <string name="pay_order_sub_total">Subtotal</string>
+    <string name="pay_order_tax">Tax</string>
+    <string name="pay_order_total">Total</string>
+    <string name="pay_order_price">5,000 KRW</string>
+
+    <!--kiosk order option-->
+    <string name="option_order_title_01">Product</string>
+    <string name="option_order_title_02">Type</string>
+    <string name="option_order_title_03">Size</string>
+    <string name="txt_option_order_type_hot">Hot</string>
+    <string name="txt_option_order_type_ice">Ice</string>
+    <string name="txt_option_order_size_small">Small</string>
+    <string name="txt_option_order_size_mediuam">Mediuam</string>
+    <string name="txt_option_order_size_large">Large</string>
+    <string name="txt_option_order_put">담기</string>
+    <string name="txt_option_order_now">바로주</string>
+
+    <!--kiosk process main-->
+    <string name="txt_process_name_01">A-01</string>
+    <string name="txt_process_name_02">(order)</string>
+    <string name="txt_process_status_payment">Payment</string>
+    <string name="txt_process_status_receive_01">Receive</string>
+    <string name="txt_process_status_receive_02">order</string>
+    <string name="txt_process_status_making">Making</string>
+    <string name="txt_process_status_complete">Complete</string>
 </resources>

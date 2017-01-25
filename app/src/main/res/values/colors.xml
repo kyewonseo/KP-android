@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="green">#FF008000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="homeBg">#36373c</color>
+
+    <!--application theme-->
+    <color name="theme_color_01">#313236</color>
+
+    <color name="color_01">#f3f3f3</color>
+    <color name="color_02">#ffffff</color>
+    <color name="color_03">#424246</color>
+    <color name="color_04">#313131</color>
+    <color name="color_05">#e94d50</color>
+    <color name="color_06">#cdc5c5</color>
+    <color name="color_07">#a3a3a3</color>
+    <color name="color_08">#e1e1e1</color>
+    <color name="color_09">#424346</color>
+    <color name="color_10">#d1d1d1</color>
+    <color name="color_11">#7d7d7d</color>
+    <color name="color_12">#ebebeb</color>
+    <color name="color_13">#565656</color>
+    <color name="color_14">#7f7f7f</color>
+    <color name="color_15">#5a5a5a</color>
+    <color name="color_16">#eaeaea</color>
+    <color name="color_18">#989898</color>
+    <color name="color_19">#575757</color>
+    <color name="color_20">#b9b9b9</color>
+    <color name="color_21">#d3d3d3</color>
+    <color name="color_22">#eeeeee</color>
+    <color name="color_23">#535353</color>
+    <color name="color_24">#6a6a6a</color>
+
+    <!--underline-->
+    <color name="underline_01">#e5e5e5</color>
+
+
+
 </resources>
