@@ -15,7 +15,7 @@
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/store_near_list"
+                android:id="@+id/order_kind_menu_list"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@color/color_08" />
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/store_near_list2"
+                android:id="@+id/order_menu_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/color_08" />
