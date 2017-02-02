@@ -2,17 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.bluehack.kiosk">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <!--google map detail permission-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
     <application
         android:name=".ApplicationLoader"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -20,14 +18,15 @@
 
         <!--google map-->
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA7av6NBZ3U-CwHzYMPex2M96OWP1zQz4Y"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
+            android:label="@string/app_title"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +36,26 @@
         </activity>
 
         <activity
-            android:name=".StoreActivity"
+            android:name=".store.StoreActivity"
+            android:label="@string/app_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".order_pay.OrderPayActivity"
+            android:label="@string/app_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".order_option.OrderOptionActivity"
+            android:label="@string/app_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".process.ProcessActivity"
+            android:label="@string/app_title"
             android:screenOrientation="portrait">
         </activity>
 

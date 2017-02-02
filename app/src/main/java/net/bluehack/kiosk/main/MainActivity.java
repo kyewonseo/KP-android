@@ -1,4 +1,4 @@
-package net.bluehack.kiosk;
+package net.bluehack.kiosk.main;
 
 
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -18,11 +17,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ViewListener;
 
-import net.bluehack.kiosk.main.RecentCardAdapter;
+import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.store.StoreActivity;
+
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
 
 public class MainActivity extends AppCompatActivity {
@@ -60,15 +60,15 @@ public class MainActivity extends AppCompatActivity {
         orderBtn = (ImageView) findViewById(R.id.order_btn);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         carouselView = (CarouselView) findViewById(R.id.carousel_view);
-        recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
+        //recyclerView.setHasFixedSize(true);
 
-        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(layoutManager);
+        //layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        //recyclerView.setLayoutManager(layoutManager);
 
-        recentCardAdapter = new RecentCardAdapter();
-        recyclerView.setAdapter(recentCardAdapter);
-        recentCardAdapter.notifyDataSetChanged();
+        //recentCardAdapter = new RecentCardAdapter();
+        //recyclerView.setAdapter(recentCardAdapter);
+        //recentCardAdapter.notifyDataSetChanged();
 
         carouselView.setPageCount(carouselImgs.length);
         carouselView.setSlideInterval(2000);
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         orderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(MainActivity.this, StoreActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

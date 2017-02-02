@@ -104,7 +104,7 @@
                 style="@style/main_recent_menu_title_btn"/>
         </LinearLayout>
 
-        <!--<LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -154,7 +154,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_gravity="center|center_horizontal"
-                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+                    android:background="@drawable/btn_menu_sample_02_big"/>
 
                 <TextView
                     android:id="@+id/recent_menu_title_02"
@@ -233,9 +233,9 @@
                     android:text="ice" />
 
             </LinearLayout>
-        </LinearLayout>-->
+        </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="153.5dp"
             android:orientation="horizontal">
@@ -252,7 +252,7 @@
                     android:background="@drawable/bg_roundbox_half_gray"/>
             </RelativeLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
 
     </LinearLayout>
 
