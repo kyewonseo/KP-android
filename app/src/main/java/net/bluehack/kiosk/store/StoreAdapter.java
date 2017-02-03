@@ -1,11 +1,14 @@
 package net.bluehack.kiosk.store;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.order_pay.OrderPayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +20,12 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
 
     private static final String TAG = makeLogTag(net.bluehack.kiosk.main.RecentCardAdapter.class);
 
+    private Context context;
     private static List<StoreItem> list = new ArrayList<>();
 
-    public StoreAdapter(){}
+    public StoreAdapter(Context context) {
+        this.context = context;
+    }
 
     @Override
     public StoreViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -31,13 +37,24 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
     @Override
     public void onBindViewHolder(StoreViewHolder holder, int position) {
 
-        LOGE(TAG, "StoreAdapter StoreItem count :"+ list.get(position));
-
         StoreItem storeItem = list.get(position);
         //holder.imageView.setBackground(ContextCompat.getDrawable(context, img));
         holder.name.setText(storeItem.getName());
         holder.address.setText(storeItem.getAddress());
         holder.meter.setText(storeItem.getMeter());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                /**Fixme: @k
+                 * flow 추가시 map 선택으로 바뀔 예정 */
+
+                Intent intent = new Intent(context, OrderPayActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -54,6 +71,8 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
     }
 
     public void addItem(List<StoreItem> itemList) {
-        list = itemList;
+        if (list instanceof ArrayList) {
+            list = itemList;
+        }
     }
 }

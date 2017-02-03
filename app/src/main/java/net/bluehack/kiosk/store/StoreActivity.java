@@ -14,14 +14,11 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -31,16 +28,12 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Places;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 
-import net.bluehack.kiosk.api.ApiClient;
-import net.bluehack.kiosk.order_pay.OrderPayActivity;
 import net.bluehack.kiosk.R;
-import net.bluehack.kiosk.util.GooglePlaceXMLParser;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -65,7 +58,7 @@ public class StoreActivity extends Activity implements
     private static final String TAG = makeLogTag(StoreActivity.class);
     private Context context;
     private static GoogleApiClient googleApiClient = null;
-    private LocationRequest locationRequest = null;
+    private static LocationRequest locationRequest = null;
     private static GoogleMap googleMap = null;
     private String currentLocationAddress = null;
     private static LocationManager locationManager = null;
@@ -102,34 +95,24 @@ public class StoreActivity extends Activity implements
         super.onCreate(savedInstanceState);
         setContentView(net.bluehack.kiosk.R.layout.activity_store);
 
+        context = getApplicationContext();
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         recyclerView = (RecyclerView) findViewById(R.id.store_recommend_list);
         recyclerView.setHasFixedSize(true);
-
         mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        storeAdapter = new StoreAdapter();
+        storeAdapter = new StoreAdapter(context);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(storeAdapter);
-
-        /*LinearLayout store_ll_btn = (LinearLayout) findViewById(R.id.store_ll_btn);
-        store_ll_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StoreActivity.this, OrderPayActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-        });*/
     }
 
 
     public boolean checkLocationPermission()
     {
-        Log.d( TAG, "checkLocationPermission");
+        LOGD(TAG, "checkLocationPermission");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
@@ -148,22 +131,27 @@ public class StoreActivity extends Activity implements
                 return false;
             } else {
 
-                Log.d( TAG, "checkLocationPermission"+"이미 퍼미션 획득한 경우");
-
+                LOGD(TAG, "checkLocationPermission"+"이미 퍼미션 획득한 경우");
                 if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) && !setGPS)
                 {
-                    Log.d(TAG, "checkLocationPermission Version >= M");
+                    LOGD(TAG, "checkLocationPermission Version >= M");
                     showGPSDisabledAlertToUser();
                 }
 
                 if (googleApiClient == null) {
-                    Log.d( TAG, "checkLocationPermission "+"mGoogleApiClient==NULL");
+                    LOGD(TAG, "checkLocationPermission "+"mGoogleApiClient==NULL");
                     buildGoogleApiClient();
                 }
-                else  Log.d( TAG, "checkLocationPermission "+"mGoogleApiClient!=NULL");
+                else {
+                    LOGD(TAG, "checkLocationPermission "+"mGoogleApiClient!=NULL");
+                }
 
-                if ( googleApiClient.isConnected() ) Log.d( TAG, "checkLocationPermission"+"mGoogleApiClient 연결되 있음");
-                else Log.d( TAG, "checkLocationPermission"+"mGoogleApiClient 끊어져 있음");
+                if ( googleApiClient.isConnected()) {
+                    LOGD(TAG, "checkLocationPermission"+"mGoogleApiClient 연결되 있음");
+                }
+                else {
+                    LOGD(TAG, "checkLocationPermission"+"mGoogleApiClient 끊어져 있음");
+                }
 
 
                 googleApiClient.reconnect();//이미 연결되 있는 경우이므로 다시 연결
@@ -174,7 +162,7 @@ public class StoreActivity extends Activity implements
         else {
             if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) && !setGPS)
             {
-                Log.d(TAG, "checkLocationPermission Version < M");
+                LOGD(TAG, "checkLocationPermission Version < M");
                 showGPSDisabledAlertToUser();
             }
 
@@ -273,7 +261,7 @@ public class StoreActivity extends Activity implements
 
         LOGD(TAG, "onConnected");
 
-        /**TODO: @k
+        /**Fixme: @k
          * LocationManager
          * NETWORK_PROVIDER, GPS_PROVIDER 둘다 기기별 테스트 필요 */
         if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
@@ -292,19 +280,18 @@ public class StoreActivity extends Activity implements
             LOGD(TAG, "Can't get locationManager!");
         }
 
-        locationRequest = new LocationRequest();
-        //locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        locationRequest.setInterval(1000);
-        locationRequest.setFastestInterval(1000);
-
-
         if ( setGPS && googleApiClient.isConnected() ) {
+
+            locationRequest = new LocationRequest();
+            //locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+            locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+            locationRequest.setInterval(1000);
+            locationRequest.setFastestInterval(1000);
 
             LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this);
             location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
             LOGD(TAG, "GPS_PROVIDER location:" + location.getLatitude() + "," + location.getLongitude());
-            LOGD(TAG, "GPS_PROVIDER Address:" + findAddress(location));
+            //LOGD(TAG, "GPS_PROVIDER Address:" + findAddress(location));
             if (location != null) {
 
                 new NRPlaces.Builder()
@@ -345,6 +332,7 @@ public class StoreActivity extends Activity implements
     protected void onStart() {
         super.onStart();
 
+        storeAdapter.clean();
         if (googleApiClient != null) {
             googleApiClient.connect();
         }
@@ -361,21 +349,22 @@ public class StoreActivity extends Activity implements
 
     @Override
     protected void onStop() {
+        super.onStop();
 
         if (googleApiClient != null && googleApiClient.isConnected()) {
             googleApiClient.disconnect();
         }
-        super.onStop();
     }
 
 
     @Override
     public void onPause() {
+        super.onPause();
+
+        storeAdapter.clean();
         if ( googleApiClient != null && googleApiClient.isConnected()) {
             googleApiClient.disconnect();
         }
-
-        super.onPause();
     }
 
     @Override
@@ -401,7 +390,6 @@ public class StoreActivity extends Activity implements
     public void onLocationChanged(Location location) {
 
         LOGD(TAG, "location:" + location.getLatitude() + "," + location.getLongitude());
-        LOGD(TAG, "Address:" + findAddress(location));
     }
 
     //GPS 활성화를 위한 다이얼로그 보여주기
@@ -501,11 +489,8 @@ public class StoreActivity extends Activity implements
                     if (places.size() != 0) {
                         StoreItem storeItem = new StoreItem();
                         int meter = distanceLocation(location.getLatitude(), location.getLongitude(), place.getLatitude(), place.getLongitude());
-                        LOGE(TAG,"PALCE meter : " + meter);
-                        LOGE(TAG,"PALCE getName : " + place.getName());
-                        LOGE(TAG,"PALCE address : " + place.getVicinity());
-                        LOGE(TAG,"PALCE getLatitude :" + place.getLatitude());
-                        LOGE(TAG,"PALCE getLongitude :" + place.getLongitude());
+                        LOGD(TAG,"PALCE meter : " + meter);
+                        LOGD(TAG,"PALCE getName : " + place.getName());
                         storeItem.setName(place.getName());
                         storeItem.setAddress(place.getVicinity());
                         storeItem.setMeter(String.valueOf(meter)+"m");
@@ -521,9 +506,7 @@ public class StoreActivity extends Activity implements
     @Override
     public void onPlacesFinished() {
         LOGD(TAG,"onPlacesFinished()");
-        LOGE(TAG,"storeList = " + storeList.toString());
 
-        storeAdapter.clean();
         storeAdapter.addItem(storeList);
         storeAdapter.notifyDataSetChanged();
     }

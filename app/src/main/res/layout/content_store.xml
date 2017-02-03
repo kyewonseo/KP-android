@@ -33,18 +33,11 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/store_recommend_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/store_recommend_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_02" />
-    </RelativeLayout>
-
-
+        android:layout_height="245.5dp"
+        android:background="@color/color_02" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,16 +71,11 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/store_near_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/store_near_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/color_02" />
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:background="@color/color_02" />
 
     </LinearLayout>
 

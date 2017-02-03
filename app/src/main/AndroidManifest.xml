@@ -42,6 +42,12 @@
         </activity>
 
         <activity
+            android:name=".order.OrderActivity"
+            android:label="@string/app_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name=".order_pay.OrderPayActivity"
             android:label="@string/app_title"
             android:screenOrientation="portrait">
