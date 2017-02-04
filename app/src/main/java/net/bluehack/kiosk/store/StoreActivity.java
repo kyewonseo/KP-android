@@ -245,8 +245,6 @@ public class StoreActivity extends Activity implements
             {
                 /**앱을 삭제할 경우*/
                 checkLocationPermission();
-                buildGoogleApiClient();
-                googleMap.setMyLocationEnabled(true);
             }
         }
         else
