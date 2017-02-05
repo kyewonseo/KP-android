@@ -10,27 +10,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/catalog_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="45dp"
+            android:background="@color/color_08" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/order_kind_menu_list"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@color/color_08" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/order_menu_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/order_menu_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/color_08" />
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:background="@color/color_02" />
 
     </LinearLayout>
 

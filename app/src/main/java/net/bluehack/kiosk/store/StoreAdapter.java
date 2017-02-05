@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.order.OrderActivity;
 import net.bluehack.kiosk.order_pay.OrderPayActivity;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import static net.bluehack.kiosk.util.Logger.makeLogTag;
 
 public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
 
-    private static final String TAG = makeLogTag(net.bluehack.kiosk.main.RecentCardAdapter.class);
+    private static final String TAG = makeLogTag(StoreAdapter.class);
 
     private Context context;
     private static List<StoreItem> list = new ArrayList<>();
@@ -50,7 +51,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
                 /**Fixme: @k
                  * flow 추가시 map 선택으로 바뀔 예정 */
 
-                Intent intent = new Intent(context, OrderPayActivity.class);
+                Intent intent = new Intent(context, OrderActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -73,6 +74,8 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
     public void addItem(List<StoreItem> itemList) {
         if (list instanceof ArrayList) {
             list = itemList;
+        } else {
+            LOGE(TAG, "error handler");
         }
     }
 }
