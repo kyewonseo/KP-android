@@ -154,7 +154,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_gravity="center|center_horizontal"
-                    android:background="@drawable/btn_recent_menu_sample_01_nor"/>
+                    android:background="@drawable/btn_menu_sample_02_big"/>
 
                 <TextView
                     android:id="@+id/recent_menu_title_02"
@@ -233,20 +233,26 @@
                     android:text="ice" />
 
             </LinearLayout>
-
         </LinearLayout>
 
-        <!--<RelativeLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="153.5dp"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recent_menu_list"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_roundbox_half_gray"/>
-        </RelativeLayout>-->
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recent_menu_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_roundbox_half_gray"/>
+            </RelativeLayout>
+
+        </LinearLayout>-->
 
     </LinearLayout>
 

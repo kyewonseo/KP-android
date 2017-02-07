@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name"></string>
-    <string name="app_title">kiosk</string>
+    <string name="app_name">kiosk</string>
+    <string name="app_title"></string>
 
     <!--tool_bar_name-->
     <string name="tool_bar_main">KIOSK CAFE</string>
@@ -86,4 +86,19 @@
     <string name="txt_process_status_receive_02">order</string>
     <string name="txt_process_status_making">Making</string>
     <string name="txt_process_status_complete">Complete</string>
+
+    <!-- kiosk store location -->
+    <string name="txt_store_name">스타벅스 정자점</string>
+    <string name="txt_store_address">경기도 성남시 분당구 정자일로 166,SPG센터 (정자동)</string>
+    <string name="txt_store_meter">630m</string>
+
+    <string name="txt_order_catalog_name_01">Coffee</string>
+    <string name="txt_order_catalog_name_02">Set menu</string>
+    <string name="txt_order_catalog_name_03">Hamburger</string>
+    <string name="txt_order_catalog_name_04">Sandwich</string>
+
+    <!--kiosk order menu-->
+    <string name="txt_order_menu_name">Cappuccino</string>
+    <string name="txt_order_menu_price">5,000 KRW</string>
+
 </resources>

@@ -1,40 +1,28 @@
-package net.bluehack.kiosk;
+package net.bluehack.kiosk.main;
 
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.amazonaws.mobileconnectors.apigateway.ApiRequest;
-import com.amazonaws.mobileconnectors.apigateway.ApiResponse;
-import com.amazonaws.mobileconnectors.apigateway.annotation.Parameter;
 import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageListener;
 import com.synnapps.carouselview.ViewListener;
 
-import net.bluehack.kiosk.api.ApiClient;
-import net.bluehack.kiosk.model.Result;
-import net.bluehack.kiosk.model.SideMenu;
+import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.store.StoreActivity;
 
-import java.util.ArrayList;
-
-import static net.bluehack.kiosk.util.Logger.LOGD;
-import static net.bluehack.kiosk.util.Logger.LOGE;
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,15 +35,22 @@ public class MainActivity extends AppCompatActivity {
     private int[] carouselImgs = {R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion};
 
     private RecyclerView recyclerView;
-    private CardAdapter cardAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ImageView orderBtn;
+    private RecentCardAdapter recentCardAdapter = null;
+    private final String query = "b_read_data";
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -65,13 +60,15 @@ public class MainActivity extends AppCompatActivity {
         orderBtn = (ImageView) findViewById(R.id.order_btn);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         carouselView = (CarouselView) findViewById(R.id.carousel_view);
-//        recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
-//        recyclerView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-//        recyclerView.setLayoutManager(layoutManager);
-//
-//        cardAdapter = new CardAdapter(context);
-//        recyclerView.setAdapter(cardAdapter);
+        //recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
+        //recyclerView.setHasFixedSize(true);
+
+        //layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        //recyclerView.setLayoutManager(layoutManager);
+
+        //recentCardAdapter = new RecentCardAdapter();
+        //recyclerView.setAdapter(recentCardAdapter);
+        //recentCardAdapter.notifyDataSetChanged();
 
         carouselView.setPageCount(carouselImgs.length);
         carouselView.setSlideInterval(2000);
@@ -126,13 +123,17 @@ public class MainActivity extends AppCompatActivity {
         orderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
-                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-               // context.startActivities(new Intent[]{intent});
+                //Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, StoreActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
 
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -149,4 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
