@@ -4,6 +4,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <!--toolbar text-->
+    <style name="toolbar_text">
+
+    </style>
     <!--drawer_header-->
     <style name="drawer_header_txt_01">
         <item name="android:textColor">@color/color_05</item>

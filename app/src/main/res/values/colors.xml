@@ -12,14 +12,15 @@
     <!--application theme-->
     <color name="theme_color_01">#313236</color>
 
-    <color name="color_01">#f3f3f3</color>
-    <color name="color_02">#ffffff</color>
-    <color name="color_03">#424246</color>
-    <color name="color_04">#313131</color>
-    <color name="color_05">#e94d50</color>
-    <color name="color_06">#cdc5c5</color>
-    <color name="color_07">#a3a3a3</color>
-    <color name="color_08">#e1e1e1</color>
+    <color name="color_01">#f9f9f9</color>
+    <color name="color_02">#3d3d3d</color>
+    <color name="color_03">#ffffff</color>
+    <color name="color_04">#d8d8d8</color>
+    <color name="color_05">#3e3e3e</color>
+    <color name="color_06">#c0c0c0</color>
+    <color name="color_07">#e2e2e2</color>
+    <color name="color_08">#ededed</color>
+
     <color name="color_09">#424346</color>
     <color name="color_10">#d1d1d1</color>
     <color name="color_11">#7d7d7d</color>

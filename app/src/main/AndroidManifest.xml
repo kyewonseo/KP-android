@@ -14,8 +14,8 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".main.MainActivity"
-            android:label="@string/tool_bar_main"
+            android:name=".login.LoginActivity"
+            android:label="@string/tool_bar_store"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
