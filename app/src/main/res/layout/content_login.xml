@@ -25,7 +25,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/login_text_underline_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -33,20 +34,28 @@
                     android:text="@string/login_id"
                     android:textSize="16sp"
                     android:textColor="@color/color_05"
+                    android:gravity="center|center_horizontal"
                     android:layout_marginLeft="@dimen/login_text_left_margin"
                     android:layout_marginRight="@dimen/login_text_id_right_margin"/>
 
-                <TextView
+                <EditText
+                    android:id="@+id/login_text_id"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="@string/login_text_id"
                     android:textSize="14sp"
                     android:textColorHint="@color/color_06"
-                    android:layout_marginBottom="@dimen/login_text_underline_margin"/>
+                    android:gravity="left|center_horizontal"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
             <TextView
+                android:id="@+id/login_underline_text_id"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/color_04"/>
@@ -61,7 +70,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/login_text_underline_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,22 +79,30 @@
                     android:text="@string/login_passwd"
                     android:textSize="16sp"
                     android:textColor="@color/color_05"
+                    android:gravity="center|center_horizontal"
                     android:layout_marginLeft="@dimen/login_text_left_margin"
-                    android:layout_marginRight="@dimen/login_text_pw_rigth_margin"/>
+                    android:layout_marginRight="@dimen/login_text_pw_right_margin"/>
 
-                <TextView
+                <EditText
+                    android:id="@+id/login_text_pw"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:hint="@string/login_text_passwd"
                     android:textSize="14sp"
-                    android:textColorHint="@color/color_06"/>
+                    android:textColorHint="@color/color_06"
+                    android:gravity="left|center_horizontal"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <TextView
+                android:id="@+id/login_underline_text_pw"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/color_04"
-                android:layout_marginBottom="@dimen/login_text_underline_margin"/>
+                android:background="@color/color_04"/>
         </LinearLayout>
 
 

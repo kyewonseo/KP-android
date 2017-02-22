@@ -1,3 +1,4 @@
+/*
 package net.bluehack.kiosk.order;
 
 import android.content.Context;
@@ -7,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.bluehack.kiosk.R;
-import net.bluehack.kiosk.model.MenuDataItem;
 
 import java.util.ArrayList;
 
@@ -61,3 +61,4 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemViewHolder> {
         }
     }
 }
+*/

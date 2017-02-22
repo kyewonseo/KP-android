@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.bluehack.kiosk.R;
-import net.bluehack.kiosk.order.OrderActivity;
-import net.bluehack.kiosk.order_pay.OrderPayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,9 +49,9 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
                 /**Fixme: @k
                  * flow 추가시 map 선택으로 바뀔 예정 */
 
-                Intent intent = new Intent(context, OrderActivity.class);
+                /*Intent intent = new Intent(context, OrderActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                context.startActivity(intent);*/
             }
         });
     }

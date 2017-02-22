@@ -1,3 +1,4 @@
+/*
 package net.bluehack.kiosk.order;
 
 import android.content.Context;
@@ -54,3 +55,4 @@ public class OrderActivity extends AppCompatActivity {
     }
 
 }
+*/
