@@ -34,14 +34,6 @@
         android:layout_height="187dp"
         android:orientation="vertical">
 
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carousel_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fillColor="@color/color_01"
-            app:pageColor="@color/color_03"
-            app:radius="5dp"
-            app:strokeWidth="1dp"/>
     </LinearLayout>
 
     <RelativeLayout

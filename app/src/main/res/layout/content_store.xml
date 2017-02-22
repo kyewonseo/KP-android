@@ -39,44 +39,4 @@
         android:layout_height="245.5dp"
         android:background="@color/color_02" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/store_near_title"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@color/color_08">
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignBottom="@id/store_near_title"
-                android:layout_alignLeft="@id/store_near_title"
-                android:layout_alignRight="@id/store_near_title"
-                android:layout_alignTop="@id/store_near_title"
-                android:paddingBottom="5.5dp"
-                android:paddingLeft="15dp"
-                android:paddingTop="4dp"
-                android:text="@string/store_recommend_title"
-                android:textColor="@color/color_02"
-                android:textSize="12sp" />
-
-        </RelativeLayout>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/store_near_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/color_02" />
-
-    </LinearLayout>
-
 </LinearLayout>

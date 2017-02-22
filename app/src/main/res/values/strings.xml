@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">kiosk</string>
-    <string name="app_title"></string>
 
     <!--tool_bar_name-->
     <string name="tool_bar_main">KIOSK CAFE</string>

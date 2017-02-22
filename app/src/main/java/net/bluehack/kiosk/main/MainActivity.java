@@ -11,14 +11,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ViewListener;
 
 import net.bluehack.kiosk.R;
 import net.bluehack.kiosk.store.StoreActivity;
@@ -31,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    private CarouselView carouselView;
-    private int[] carouselImgs = {R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion, R.drawable.img_slidemenu_promotion};
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -56,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.btn_main_menu_nor);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 
         orderBtn = (ImageView) findViewById(R.id.order_btn);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        carouselView = (CarouselView) findViewById(R.id.carousel_view);
         //recyclerView = (RecyclerView) findViewById(R.id.recent_menu_list);
         //recyclerView.setHasFixedSize(true);
 
@@ -69,21 +64,6 @@ public class MainActivity extends AppCompatActivity {
         //recentCardAdapter = new RecentCardAdapter();
         //recyclerView.setAdapter(recentCardAdapter);
         //recentCardAdapter.notifyDataSetChanged();
-
-        carouselView.setPageCount(carouselImgs.length);
-        carouselView.setSlideInterval(2000);
-        carouselView.setViewListener(new ViewListener() {
-            @Override
-            public View setViewForPosition(int position) {
-                View carouselListItem = getLayoutInflater().inflate(R.layout.carousel_list_item, null);
-                ImageView carouselItemImg = (ImageView) carouselListItem.findViewById(R.id.carousel_item_img);
-
-                carouselItemImg.setImageResource(carouselImgs[position]);
-                carouselView.setIndicatorGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM);
-
-                return carouselListItem;
-            }
-        });
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
