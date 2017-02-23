@@ -12,6 +12,7 @@ import net.bluehack.kiosk.KioskAPIClient;
 import net.bluehack.kiosk.api.net.NetworkManager;
 import net.bluehack.kiosk.model.LoginReq;
 import net.bluehack.kiosk.model.LoginRes;
+import net.bluehack.kiosk.model.StoresRes;
 
 import static net.bluehack.kiosk.util.Logger.LOGD;
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
@@ -47,7 +48,23 @@ public class ApiClient {
 
                 LoginRes output = null;
                 output = client.usersLoginPost(headerToken, loginReq);
-                LOGD("usersLoginPost:", String.valueOf(output.getResponseStatus()));
+                LOGD("usersLoginPost status :", String.valueOf(output.getResponseStatus()));
+
+                listener.onResponse(output);
+                return null;
+            }
+
+        }.execute();
+    }
+
+    public void storesAccountIdGet(final String accountId, final ApiResponseListener listener) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+
+                StoresRes output = null;
+                output = client.storesAccountIdGet(headerToken, accountId);
+                LOGD("StoresRes status :", String.valueOf(output.getResponseStatus()));
 
                 listener.onResponse(output);
                 return null;

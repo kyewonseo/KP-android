@@ -127,6 +127,16 @@ public class LoginActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
     public static int getColor(Context context, int id) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             return context.getColor(id);
@@ -158,6 +168,7 @@ public class LoginActivity extends Activity {
                                         Gson gson = new Gson();
                                         String loginResDataItem = gson.toJson(loginRes.getData());
                                         KioskPreference.getInstance().setLoginInfo(loginResDataItem);
+                                        KioskPreference.getInstance().setAccountId(loginReq.getLoginId());
 
                                         Intent intent = new Intent(LoginActivity.this, StoreActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
