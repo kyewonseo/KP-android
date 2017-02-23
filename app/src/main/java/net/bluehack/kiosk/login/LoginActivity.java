@@ -64,10 +64,18 @@ public class LoginActivity extends Activity {
         login_underline_text_id = (TextView) findViewById(R.id.login_underline_text_id);
         login_underline_text_pw = (TextView) findViewById(R.id.login_underline_text_pw);
 
+        login_text_id.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    login_underline_text_id.setBackgroundColor(getColor(getApplicationContext(),R.color.color_09));
+                    login_underline_text_pw.setBackgroundColor(getColor(getApplicationContext(),R.color.color_04));
+                }
+            }
+        });
         login_text_id.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                login_underline_text_id.setBackgroundColor(getColor(getApplicationContext(),R.color.color_09));
             }
 
             @Override
@@ -80,10 +88,18 @@ public class LoginActivity extends Activity {
             }
         });
 
+        login_text_pw.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    login_underline_text_pw.setBackgroundColor(getColor(getApplicationContext(),R.color.color_09));
+                    login_underline_text_id.setBackgroundColor(getColor(getApplicationContext(),R.color.color_04));
+                }
+            }
+        });
         login_text_pw.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                login_underline_text_pw.setBackgroundColor(getColor(getApplicationContext(),R.color.color_09));
             }
 
             @Override
