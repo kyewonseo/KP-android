@@ -51,7 +51,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if (chackAutoLogin()) {
+        if (checkedAutoLogin()) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(intent);
@@ -179,7 +179,7 @@ public class LoginActivity extends Activity {
         }
     }
 
-    private boolean chackAutoLogin() {
+    private boolean checkedAutoLogin() {
         if (KioskPreference.getInstance().getLoginInfo() != null) {
             return true;
         } else {
