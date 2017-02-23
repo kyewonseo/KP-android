@@ -99,7 +99,7 @@
     <!-- kiosk store location -->
     <string name="txt_store_name">스타벅스 정자점</string>
     <string name="txt_store_address">경기도 성남시 분당구 정자일로 166,SPG센터 (정자동)</string>
-    <string name="txt_store_meter">630m</string>
+    <string name="txt_store_yd">52 yd</string>
 
     <string name="txt_order_catalog_name_01">Coffee</string>
     <string name="txt_order_catalog_name_02">Set menu</string>

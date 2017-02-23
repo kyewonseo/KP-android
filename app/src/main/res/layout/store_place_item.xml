@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/store_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="81.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/store_item_ll_padding">
+
+            <ImageView
+                android:id="@+id/store_iv"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/img_store_suggest"
+                android:layout_marginRight="@dimen/store_item_iv_right_margin"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/store_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_store_name"
+                    android:textColor="@color/color_05"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="@dimen/store_item_text_name_bottom_margin"/>
+
+                <TextView
+                    android:id="@+id/store_text_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/txt_store_address"
+                    android:textColor="@color/color_10"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:lines="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/store_text_yd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/txt_store_yd"
+                    android:textColor="@color/color_05"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

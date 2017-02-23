@@ -1,7 +1,6 @@
 package net.bluehack.kiosk.store;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +28,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
     @Override
     public StoreViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.store_recommend_place_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.store_place_item, parent, false);
         return new StoreViewHolder(v);
     }
 
