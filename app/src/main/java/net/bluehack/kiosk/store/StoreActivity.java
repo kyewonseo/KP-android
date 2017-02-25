@@ -95,6 +95,7 @@ public class StoreActivity extends Activity {
                                             storeDataItem.setSLogo(item.getSLogo());
                                             storeDataItem.setStore(item.getStore());
                                             storeDataItem.setSAddress(item.getSAddress());
+                                            storeDataItem.setStoreId(item.getStoreId());
 
                                             storeItems.add(storeDataItem);
                                         }

@@ -8,6 +8,7 @@
     <string name="tool_bar_order">MOBILE ORDER</string>
     <string name="tool_bar_order_pay">PAYMENT</string>
     <string name="tool_bar_order_option">ORDER</string>
+    <string name="tool_bar_myinfo">MY INFO</string>
 
     <!--drawer_header-->
     <string name="drawer_header_txt_01">WELCOME</string>
@@ -110,4 +111,10 @@
     <string name="txt_order_menu_name">Cappuccino</string>
     <string name="txt_order_menu_price">5,000 KRW</string>
 
+    <!--kiosk myinfo-->
+    <string name="myinfo_text_id">ID</string>
+    <string name="myinfo_text_name">NAME</string>
+    <string name="myinfo_text_phone">PHONE</string>
+    <string name="myinfo_text_point">POINT</string>
+    <string name="myinfo_btn_text">LOG OUT</string>
 </resources>

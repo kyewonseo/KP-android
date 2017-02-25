@@ -166,7 +166,7 @@ public class LoginActivity extends Activity {
 
                                         //set preference
                                         Gson gson = new Gson();
-                                        String loginResDataItem = gson.toJson(loginRes.getData());
+                                        String loginResDataItem = gson.toJson(loginRes);
                                         KioskPreference.getInstance().setLoginInfo(loginResDataItem);
                                         KioskPreference.getInstance().setAccountId(loginReq.getLoginId());
 

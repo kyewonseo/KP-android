@@ -15,6 +15,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import net.bluehack.kiosk.R;
 import net.bluehack.kiosk.main.MainActivity;
 import net.bluehack.kiosk.model.StoresResDataItem;
+import net.bluehack.kiosk.util.KioskPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
     @Override
     public void onBindViewHolder(StoreViewHolder holder, int position) {
 
-        StoresResDataItem storeItem = list.get(position);
+        final StoresResDataItem storeItem = list.get(position);
 
         Glide.with(context)
                 .load(storeItem.getSLogo())
@@ -60,8 +61,11 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
             @Override
             public void onClick(View v) {
 
+                //set preference storeid
+                KioskPreference.getInstance().setStoreId(storeItem.getStoreId());
+                KioskPreference.getInstance().setStoreName(storeItem.getStore());
+
                 Intent intent = new Intent(context, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 context.startActivity(intent);
                 ((Activity) context).finish();
             }

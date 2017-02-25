@@ -36,6 +36,11 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity
+            android:name=".myinfo.MyInfoActivity"
+            android:label="@string/tool_bar_myinfo"
+            android:screenOrientation="portrait">
+        </activity>
         <!--<activity
             android:name=".order.OrderActivity"
             android:label="@string/tool_bar_order"

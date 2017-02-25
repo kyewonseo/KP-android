@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.myinfo.MyInfoActivity;
 import net.bluehack.kiosk.store.StoreActivity;
 
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.nav_item_03:
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(MainActivity.this, MyInfoActivity.class);
+                        startActivity(intent);
+                        finish();
                         break;
 
                     case R.id.nav_item_04:
