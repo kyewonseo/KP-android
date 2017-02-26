@@ -47,6 +47,11 @@
             android:label="@string/tool_bar_subcategory"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity
+            android:name=".menu.MenuActivity"
+            android:screenOrientation="portrait">
+        </activity>
         <!--<activity
             android:name=".order.OrderActivity"
             android:label="@string/tool_bar_order"

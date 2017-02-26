@@ -1,12 +1,15 @@
 package net.bluehack.kiosk.subcategory;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.menu.MenuActivity;
 import net.bluehack.kiosk.model.SubcategoryResDataItem;
 
 import java.util.ArrayList;
@@ -43,11 +46,11 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryViewHold
             @Override
             public void onClick(View v) {
 
-                //call menu api
-
-                /*Intent intent = new Intent(context, MainActivity.class);
+                Intent intent = new Intent(context, MenuActivity.class);
+                intent.putExtra("sub_category_id", subcategoryResDataItem.getSubCategoryId());
+                intent.putExtra("sub_category_name", subcategoryResDataItem.getSubCategoryName());
                 context.startActivity(intent);
-                ((Activity) context).finish();*/
+                //((Activity) context).finish();
             }
         });
     }

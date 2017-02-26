@@ -13,6 +13,7 @@ import net.bluehack.kiosk.KioskAPIClient;
 import net.bluehack.kiosk.api.net.NetworkManager;
 import net.bluehack.kiosk.model.LoginReq;
 import net.bluehack.kiosk.model.LoginRes;
+import net.bluehack.kiosk.model.MenuRes;
 import net.bluehack.kiosk.model.StoresRes;
 import net.bluehack.kiosk.model.SubcategoryRes;
 
@@ -92,21 +93,19 @@ public class ApiClient {
         }.execute();
     }
 
-    /*public void menuGet(final String query, final ApiResponseListener listener) {
+    public void menuSubCategoryIdGet(final String sub_category_id, final ApiResponseListener listener) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
 
-                Menu output = null;
+                MenuRes output = null;
 
-                output = client.menuGet(query);
-                Log.e("menuGet:", String.valueOf(output));
+                output = client.menuSubCategoryIdGet(sub_category_id, headerToken);
 
                 listener.onResponse(output);
-
                 return null;
             }
 
         }.execute();
-    }*/
+    }
 }

@@ -27,7 +27,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="right|center"
+                android:gravity="end|center"
                 android:paddingRight="@dimen/subcategory_item_iv_right_padding">
 
                 <ImageView

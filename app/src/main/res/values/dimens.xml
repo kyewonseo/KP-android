@@ -29,4 +29,9 @@
     <dimen name="subcategory_item_text_name_left_margin">15dp</dimen>
     <dimen name="subcategory_item_iv_right_padding">24.5dp</dimen>
 
+    <!--menu_layout-->
+    <dimen name="menu_item_img_left_padding">15dp</dimen>
+    <dimen name="menu_item_ll_tv_left_margin">13dp</dimen>
+    <dimen name="menu_item_tv_bottom_margin">4.5dp</dimen>
+
 </resources>

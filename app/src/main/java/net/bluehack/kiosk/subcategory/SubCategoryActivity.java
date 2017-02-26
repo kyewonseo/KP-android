@@ -22,7 +22,6 @@ import net.bluehack.kiosk.util.KioskPreference;
 
 import java.util.ArrayList;
 
-import static android.content.ContentValues.TAG;
 import static net.bluehack.kiosk.util.Logger.LOGD;
 import static net.bluehack.kiosk.util.Logger.LOGE;
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
@@ -110,6 +109,7 @@ public class SubCategoryActivity extends Activity {
                                         for (SubcategoryResDataItem item : subcategoryRes.getData()) {
 
                                             SubcategoryResDataItem subcategoryResDataItem = new SubcategoryResDataItem();
+                                            subcategoryResDataItem.setSubCategoryId(item.getSubCategoryId());
                                             subcategoryResDataItem.setSubCategoryName(item.getSubCategoryName());
 
                                             subcategoryResDataItems.add(subcategoryResDataItem);
