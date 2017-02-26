@@ -22,4 +22,11 @@
 
     <!--myinfo_layout-->
     <dimen name="myinfo_tv_left_margin">15dp</dimen>
+
+    <!--subcategory_layout-->
+    <dimen name="subcategory_toolbar_iv_left_padding">8.5dp</dimen>
+    <dimen name="subcategory_toolbar_iv_right_padding">8.5dp</dimen>
+    <dimen name="subcategory_item_text_name_left_margin">15dp</dimen>
+    <dimen name="subcategory_item_iv_right_padding">24.5dp</dimen>
+
 </resources>

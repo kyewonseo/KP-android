@@ -3,20 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/color_04"
     android:layout_marginTop="?attr/actionBarSize">
 
-    <fragment
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.8"
-        class="com.google.android.gms.maps.MapFragment"/>
 
-    <Button
-        android:text="장소검색"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/subcategory_rv_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2"
-        android:id="@+id/button"/>
+        android:background="@color/color_03"/>
 
 </LinearLayout>

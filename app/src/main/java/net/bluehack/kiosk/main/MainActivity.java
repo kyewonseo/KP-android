@@ -19,6 +19,7 @@ import android.widget.Toast;
 import net.bluehack.kiosk.R;
 import net.bluehack.kiosk.myinfo.MyInfoActivity;
 import net.bluehack.kiosk.store.StoreActivity;
+import net.bluehack.kiosk.subcategory.SubCategoryActivity;
 
 import static net.bluehack.kiosk.util.Logger.makeLogTag;
 
@@ -107,10 +108,7 @@ public class MainActivity extends AppCompatActivity {
         orderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(MainActivity.this, StoreActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent intent = new Intent(MainActivity.this, SubCategoryActivity.class);
                 startActivity(intent);
             }
         });

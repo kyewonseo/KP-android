@@ -9,6 +9,7 @@
     <string name="tool_bar_order_pay">PAYMENT</string>
     <string name="tool_bar_order_option">ORDER</string>
     <string name="tool_bar_myinfo">MY INFO</string>
+    <string name="tool_bar_subcategory">MENU</string>
 
     <!--drawer_header-->
     <string name="drawer_header_txt_01">WELCOME</string>
