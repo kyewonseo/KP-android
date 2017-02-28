@@ -10,6 +10,7 @@
     <string name="tool_bar_order_option">ORDER</string>
     <string name="tool_bar_myinfo">MY INFO</string>
     <string name="tool_bar_subcategory">MENU</string>
+    <string name="tool_bar_menu_option">OPTION</string>
 
     <!--drawer_header-->
     <string name="drawer_header_txt_01">WELCOME</string>
@@ -77,17 +78,14 @@
     <string name="pay_order_total">Total</string>
     <string name="pay_order_price">5,000 KRW</string>
 
-    <!--kiosk order option-->
-    <string name="option_order_title_01">Product</string>
-    <string name="option_order_title_02">Type</string>
-    <string name="option_order_title_03">Size</string>
-    <string name="txt_option_order_type_hot">Hot</string>
-    <string name="txt_option_order_type_ice">Ice</string>
-    <string name="txt_option_order_size_small">Small</string>
-    <string name="txt_option_order_size_mediuam">Mediuam</string>
-    <string name="txt_option_order_size_large">Large</string>
-    <string name="txt_option_order_put">담기</string>
-    <string name="txt_option_order_now">바로주</string>
+    <!--kiosk menu option-->
+    <string name="menu_option_tv_info">MENU INFO</string>
+    <string name="menu_option_tv_calory">CALORY</string>
+    <string name="menu_option_tv_count">COUNT</string>
+    <string name="menu_option_tv_option1">OPTION 1</string>
+    <string name="menu_option_tv_option2">OPTION 2</string>
+    <string name="menu_option_tv_cart">ADD CART</string>
+    <string name="menu_option_tv_payment">PAYMENT</string>
 
     <!--kiosk process main-->
     <string name="txt_process_name_01">A-01</string>

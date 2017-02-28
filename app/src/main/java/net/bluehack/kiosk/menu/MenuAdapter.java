@@ -1,6 +1,7 @@
 package net.bluehack.kiosk.menu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.menu.option.MenuOptionActivity;
 import net.bluehack.kiosk.model.MenuResDataItem;
 
 import java.util.ArrayList;
@@ -42,7 +44,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder>{
         final MenuResDataItem menuResDataItem = list.get(position);
 
         //TODO: fixme => file server check : http://122.199.152.194:8080/var/kiosk/files/images/ice.jpg
-        String url = menuResDataItem.getServer()+menuResDataItem.getVolume()+menuResDataItem.getPath()+menuResDataItem.getName();
+        final String url = menuResDataItem.getServer()+menuResDataItem.getVolume()+menuResDataItem.getPath()+menuResDataItem.getName();
         Glide.with(context)
                 .load(url)
                 .override(64,64)
@@ -54,13 +56,21 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder>{
 
         holder.name.setText(menuResDataItem.getMItem());
         holder.price.setText(menuResDataItem.getPrice() + "$");
-        holder.imageBtn.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                /*Intent intent = new Intent(context, MenuActivity.class);
+                Intent intent = new Intent(context, MenuOptionActivity.class);
+                intent.putExtra("menu_id", menuResDataItem.getMenuId());
+                intent.putExtra("menu_name", menuResDataItem.getMItem());
+                intent.putExtra("menu_price", menuResDataItem.getPrice());
+                intent.putExtra("menu_point", menuResDataItem.getPoints());
+                intent.putExtra("menu_image", url);
+                intent.putExtra("menu_description", menuResDataItem.getDescription());
+                intent.putExtra("menu_calory", menuResDataItem.getCalory());
+
                 context.startActivity(intent);
-                ((Activity) context).finish();*/
+                //((Activity) context).finish();
             }
         });
     }

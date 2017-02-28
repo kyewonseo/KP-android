@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_01"/>
+
+        <ImageView
+            android:id="@+id/menu_option_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/toolbar"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:paddingLeft="@dimen/subcategory_toolbar_iv_left_padding"
+            android:src="@drawable/btn_menu_cart_nor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tool_bar_menu_option"
+            android:textSize="18sp"
+            android:textColor="@color/color_02"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignLeft="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:gravity="center|center_horizontal"/>
+
+        <ImageView
+            android:id="@+id/menu_option_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:paddingRight="@dimen/subcategory_toolbar_iv_right_padding"
+            android:src="@drawable/btn_menu_search_nor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_08"
+            android:layout_alignBottom="@id/toolbar"/>
+
+        <include layout="@layout/content_menu_option" />
+
+    </RelativeLayout>
+</LinearLayout>

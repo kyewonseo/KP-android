@@ -83,7 +83,7 @@ public class MenuActivity extends Activity {
                                     MenuRes menuRes = (MenuRes) result;
 
                                     Gson gson = new Gson();
-                                    LOGE(TAG, "subcategoryRes result : " + gson.toJson(result));
+                                    LOGE(TAG, "menuRes result : " + gson.toJson(result));
 
                                     if (menuRes.getResponseStatus() != null && menuRes.getResponseStatus().equals("200")) {
 
@@ -96,8 +96,12 @@ public class MenuActivity extends Activity {
                                         for (MenuResDataItem item : menuRes.getData()) {
 
                                             MenuResDataItem menuResDataItem = new MenuResDataItem();
+                                            menuResDataItem.setMenuId(item.getMenuId());
                                             menuResDataItem.setMItem(item.getMItem());
                                             menuResDataItem.setPrice(item.getPrice());
+                                            menuResDataItem.setPoints(item.getPoints());
+                                            menuResDataItem.setDescription(item.getDescription());
+                                            menuResDataItem.setCalory(item.getCalory());
                                             menuResDataItem.setServer(item.getServer());
                                             menuResDataItem.setVolume(item.getVolume());
                                             menuResDataItem.setPath(item.getPath());

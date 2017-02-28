@@ -26,7 +26,7 @@
             android:paddingBottom="5.5dp"
             android:paddingLeft="15dp"
             android:paddingTop="4dp"
-            android:text="@string/option_order_title_01"
+            android:text="@string/login_description_type1"
             android:textColor="@color/color_13"
             android:textSize="12sp" />
 
@@ -138,7 +138,7 @@
             android:paddingBottom="5.5dp"
             android:paddingLeft="15dp"
             android:paddingTop="4dp"
-            android:text="@string/option_order_title_02"
+            android:text="@string/login_description_type1"
             android:textColor="@color/color_13"
             android:textSize="12sp" />
     </RelativeLayout>
@@ -172,7 +172,7 @@
                     android:id="@+id/txt_option_order_type_hot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_option_order_type_hot"
+                    android:text="@string/login_description_type1"
                     android:textColor="@color/color_05"/>
             </LinearLayout>
             <LinearLayout
@@ -193,7 +193,7 @@
                     android:id="@+id/txt_option_order_type_ice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_option_order_type_ice"
+                    android:text="@string/login_description_type1"
                     android:textColor="@color/color_18"/>
             </LinearLayout>
         </RadioGroup>
@@ -221,7 +221,7 @@
             android:paddingBottom="5.5dp"
             android:paddingLeft="15dp"
             android:paddingTop="4dp"
-            android:text="@string/option_order_title_03"
+            android:text="@string/login_description_type1"
             android:textColor="@color/color_13"
             android:textSize="12sp" />
     </RelativeLayout>
@@ -255,7 +255,7 @@
                     android:id="@+id/txt_option_order_size_small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_option_order_size_small"
+                    android:text="@string/login_description_type1"
                     android:textColor="@color/color_05"/>
             </LinearLayout>
             <LinearLayout
@@ -276,7 +276,7 @@
                     android:id="@+id/txt_option_order_size_mediuam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_option_order_size_mediuam"
+                    android:text="@string/login_description_type1"
                     android:textColor="@color/color_18"/>
             </LinearLayout>
             <LinearLayout
@@ -297,7 +297,7 @@
                     android:id="@+id/txt_option_order_size_large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_option_order_size_large"
+                    android:text="@string/login_description_type1"
                     android:textColor="@color/color_18"/>
             </LinearLayout>
         </RadioGroup>
@@ -331,7 +331,7 @@
                 android:layout_alignLeft="@id/btn_option_order_put"
                 android:layout_alignRight="@id/btn_option_order_put"
                 android:layout_alignTop="@id/btn_option_order_put"
-                android:text="@string/txt_option_order_put"
+                android:text="@string/login_description_type1"
                 android:textSize="15sp"
                 android:textColor="@color/color_02"
                 android:gravity="center|center_horizontal"/>
@@ -355,7 +355,7 @@
                 android:layout_alignLeft="@id/btn_option_order_now"
                 android:layout_alignRight="@id/btn_option_order_now"
                 android:layout_alignTop="@id/btn_option_order_now"
-                android:text="@string/txt_option_order_now"
+                android:text="@string/login_description_type1"
                 android:textSize="15sp"
                 android:textColor="@color/color_02"
                 android:gravity="center|center_horizontal"/>

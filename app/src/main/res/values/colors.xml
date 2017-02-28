@@ -25,12 +25,13 @@
     <color name="color_11">#f6f6f6</color>
     <color name="color_12">#e3e3e3</color>
     <color name="color_13">#3e3e3e</color>
+    <color name="color_14">#f7f7f7</color>
+    <color name="color_15">#575757</color>
+    <color name="color_16">#afafaf</color>
+    <color name="color_17">#eaeaea</color>
+    <color name="color_18">#6d6d6d</color>
+    <color name="color_19">#ec4527</color>
 
-    <color name="color_14">#7f7f7f</color>
-    <color name="color_15">#5a5a5a</color>
-    <color name="color_16">#eaeaea</color>
-    <color name="color_18">#989898</color>
-    <color name="color_19">#575757</color>
     <color name="color_20">#b9b9b9</color>
     <color name="color_21">#d3d3d3</color>
     <color name="color_22">#eeeeee</color>
@@ -42,5 +43,8 @@
     <!--underline-->
     <color name="underline_01">#e5e5e5</color>
 
+    <!--btn_click_event-->
+    <drawable name="unchecked">#fd6246</drawable>
+    <drawable name="checked">#ec4527</drawable>
 
 </resources>

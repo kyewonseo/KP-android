@@ -52,6 +52,12 @@
             android:name=".menu.MenuActivity"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity
+            android:name=".menu.option.MenuOptionActivity"
+            android:label="@string/tool_bar_menu_option"
+            android:screenOrientation="portrait">
+        </activity>
         <!--<activity
             android:name=".order.OrderActivity"
             android:label="@string/tool_bar_order"

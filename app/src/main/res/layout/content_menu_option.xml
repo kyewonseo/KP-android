@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/menu_option_iv_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/menu_option_iv_left_margin"
+                    android:layout_marginRight="@dimen/menu_option_iv_right_margin"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/menu_option_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/menu_option_tv_title_bottom_margin"
+                        android:text="@string/pay_order_menu_name"
+                        android:textColor="@color/color_05"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/menu_option_tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay_order_price"
+                        android:textColor="@color/color_10"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--menu info title-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <LinearLayout
+            android:id="@+id/menu_option_ll_info_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_14"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingStart="@dimen/menu_option_ll_title_bar_left_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/menu_option_tv_info"
+                android:textColor="@color/color_15"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center">
+
+                <ImageView
+                    android:id="@+id/menu_option_info_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_arrow_down_nor" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--menu info content-->
+        <LinearLayout
+            android:id="@+id/menu_option_ll_info_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_17"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/menu_option_ll_menu_info_bottom_padding"
+            android:paddingLeft="@dimen/menu_option_ll_title_bar_left_padding"
+            android:paddingRight="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingTop="@dimen/menu_option_ll_menu_info_top_padding"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/menu_option_tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_18"
+                android:textSize="15sp"
+                android:background="@color/color_17"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <!--calory-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_14"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingStart="@dimen/menu_option_ll_title_bar_left_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/menu_option_tv_calory"
+                android:textColor="@color/color_15"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center_horizontal">
+
+                <TextView
+                    android:id="@+id/menu_option_tv_calory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|center"
+                    android:text="1,300afj;"
+                    android:textColor="@color/color_16"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <!--count-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_14"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingStart="@dimen/menu_option_ll_title_bar_left_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/menu_option_tv_count"
+                android:textColor="@color/color_15"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="end|center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/menu_option_ll_title_bar_right_padding">
+
+            <ImageButton
+                android:id="@+id/menu_option_ib_count_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_num_minus_nor" />
+
+            <TextView
+                android:id="@+id/menu_option_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:text="@string/pay_order_menu_count" />
+
+            <ImageButton
+                android:id="@+id/menu_option_ib_count_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_num_plus_nor" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <!--option 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_14"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingStart="@dimen/menu_option_ll_title_bar_left_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/menu_option_tv_option1"
+                android:textColor="@color/color_15"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menu_option1_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_03"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <!--option 2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_14"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/menu_option_ll_title_bar_right_padding"
+            android:paddingStart="@dimen/menu_option_ll_title_bar_left_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/menu_option_tv_option2"
+                android:textColor="@color/color_15"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menu_option2_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_03" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <!--fixed bottom btn-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/menu_option_btn_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_click_event" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/menu_option_btn_cart"
+                android:layout_alignStart="@id/menu_option_btn_cart"
+                android:layout_alignEnd="@id/menu_option_btn_cart"
+                android:layout_alignTop="@id/menu_option_btn_cart"
+                android:text="@string/menu_option_tv_cart"
+                android:textSize="17sp"
+                android:textColor="@color/color_03"
+                android:gravity="center|center_horizontal"/>
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_02"/>
+
+        <RelativeLayout
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/menu_option_btn_payment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_click_event" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/menu_option_btn_payment"
+                android:layout_alignStart="@id/menu_option_btn_payment"
+                android:layout_alignEnd="@id/menu_option_btn_payment"
+                android:layout_alignTop="@id/menu_option_btn_payment"
+                android:text="@string/menu_option_tv_payment"
+                android:textSize="17sp"
+                android:textColor="@color/color_03"
+                android:gravity="center|center_horizontal"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

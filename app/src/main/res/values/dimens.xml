@@ -34,4 +34,13 @@
     <dimen name="menu_item_ll_tv_left_margin">13dp</dimen>
     <dimen name="menu_item_tv_bottom_margin">4.5dp</dimen>
 
+    <!--menu_option_layout-->
+    <dimen name="menu_option_iv_left_margin">15dp</dimen>
+    <dimen name="menu_option_iv_right_margin">12dp</dimen>
+    <dimen name="menu_option_tv_title_bottom_margin">2.5dp</dimen>
+    <dimen name="menu_option_ll_title_bar_left_padding">15dp</dimen>
+    <dimen name="menu_option_ll_title_bar_right_padding">15dp</dimen>
+    <dimen name="menu_option_ll_menu_info_top_padding">14dp</dimen>
+    <dimen name="menu_option_ll_menu_info_bottom_padding">14dp</dimen>
+
 </resources>

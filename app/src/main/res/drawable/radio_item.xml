@@ -11,5 +11,5 @@
         android:drawable="@drawable/btn_radio_01_sel"
         android:state_checked="true" />
     <item
-        android:drawable="@drawable/btn_radio_01_unsel" />
+        android:drawable="@drawable/btn_radio_01_nor" />
 </selector>
