@@ -150,7 +150,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="end|center"
-                    android:text="1,300afj;"
                     android:textColor="@color/color_16"
                     android:textSize="15sp" />
             </RelativeLayout>
@@ -289,66 +288,5 @@
 
     </LinearLayout>
     </ScrollView>
-
-    <!--fixed bottom btn-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-
-        <RelativeLayout
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/menu_option_btn_cart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_click_event" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/menu_option_btn_cart"
-                android:layout_alignStart="@id/menu_option_btn_cart"
-                android:layout_alignEnd="@id/menu_option_btn_cart"
-                android:layout_alignTop="@id/menu_option_btn_cart"
-                android:text="@string/menu_option_tv_cart"
-                android:textSize="17sp"
-                android:textColor="@color/color_03"
-                android:gravity="center|center_horizontal"/>
-        </RelativeLayout>
-        
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/color_02"/>
-
-        <RelativeLayout
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/menu_option_btn_payment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_click_event" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/menu_option_btn_payment"
-                android:layout_alignStart="@id/menu_option_btn_payment"
-                android:layout_alignEnd="@id/menu_option_btn_payment"
-                android:layout_alignTop="@id/menu_option_btn_payment"
-                android:text="@string/menu_option_tv_payment"
-                android:textSize="17sp"
-                android:textColor="@color/color_03"
-                android:gravity="center|center_horizontal"/>
-        </RelativeLayout>
-    </LinearLayout>
 
 </RelativeLayout>

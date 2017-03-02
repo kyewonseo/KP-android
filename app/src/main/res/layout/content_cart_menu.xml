@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_12" />
+
+            <!--menu info title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_14"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/cart_menu_ll_left_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:text="@string/cart_menu_tv_title_01"
+                    android:textColor="@color/color_15"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+
+            <!--menu info content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cart_menu_rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_03" />
+            </LinearLayout>
+
+            <!--point title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_14"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/cart_menu_ll_left_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:text="@string/cart_menu_tv_title_02"
+                    android:textColor="@color/color_15"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+
+            <!--point content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/cart_menu_ll_right_padding">
+
+                <TextView
+                    android:id="@+id/cart_menu_tv_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_10"
+                    android:gravity="end|center"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+
+            <!--payment title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_14"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/cart_menu_ll_left_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:text="@string/cart_menu_tv_title_03"
+                    android:textColor="@color/color_15"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+
+            <!--payment content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/cart_menu_ll_left_padding"
+                android:paddingRight="@dimen/cart_menu_ll_right_padding">
+
+                <TextView
+                    android:id="@+id/cart_menu_tv_payment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_16"
+                    android:gravity="start|center"/>
+
+                <TextView
+                    android:id="@+id/cart_menu_tv_payment_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_10"
+                    android:gravity="end|center"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_12" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

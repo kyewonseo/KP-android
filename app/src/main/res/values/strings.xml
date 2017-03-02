@@ -11,6 +11,7 @@
     <string name="tool_bar_myinfo">MY INFO</string>
     <string name="tool_bar_subcategory">MENU</string>
     <string name="tool_bar_menu_option">OPTION</string>
+    <string name="tool_bar_cart_menu">CART</string>
 
     <!--drawer_header-->
     <string name="drawer_header_txt_01">WELCOME</string>
@@ -116,4 +117,12 @@
     <string name="myinfo_text_phone">PHONE</string>
     <string name="myinfo_text_point">POINT</string>
     <string name="myinfo_btn_text">LOG OUT</string>
+
+    <!--kiosk cart menu-->
+    <string name="cart_menu_tv_01">카트에 담긴 상품이 없습니다.</string>
+    <string name="cart_menu_tv_02">원하시는 상품을 담아보세요.</string>
+    <string name="cart_menu_tv_title_01">MENU INFO</string>
+    <string name="cart_menu_tv_title_02">POINT</string>
+    <string name="cart_menu_tv_title_03">PAYMENT</string>
+    <string name="cart_menu_btn_title">PAYMENT</string>
 </resources>

@@ -8,9 +8,13 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 
 import net.bluehack.kiosk.R;
+import net.bluehack.kiosk.cart.CartMenuActivity;
+import net.bluehack.kiosk.cart.CartMenuOptionItem;
+import net.bluehack.kiosk.menu.MenuActivity;
 import net.bluehack.kiosk.model.MenuOptionResDataItem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static net.bluehack.kiosk.util.Logger.LOGE;
@@ -22,6 +26,7 @@ public class MenuOption2Adapter extends RecyclerView.Adapter<MenuOption2ViewHold
 
     private Context context;
     private static List<MenuOptionResDataItem> list = new ArrayList<>();
+    private MenuOptionActivity menuOptionActivity = new MenuOptionActivity();
 
     public MenuOption2Adapter(Context context) {
         this.context = context;
@@ -35,43 +40,43 @@ public class MenuOption2Adapter extends RecyclerView.Adapter<MenuOption2ViewHold
     }
 
     @Override
-    public void onBindViewHolder(final MenuOption2ViewHolder holder, int position) {
+    public void onBindViewHolder(final MenuOption2ViewHolder holder, final int position) {
+
+        final HashMap<Integer, ArrayList<CartMenuOptionItem>> map = new HashMap<Integer, ArrayList<CartMenuOptionItem>>();
+        final ArrayList<CartMenuOptionItem> cartMenuOptionList = new ArrayList<CartMenuOptionItem>();
+        final CartMenuOptionItem cartMenuOptionItem = new CartMenuOptionItem();
 
         final MenuOptionResDataItem menuOption2ResDataItem = list.get(position);
+        final String menuOptionId = menuOption2ResDataItem.getMenuId();
+        final String menuOptionName = menuOption2ResDataItem.getMItem();
+        final String menuOptionPrice = menuOption2ResDataItem.getPrice();
 
-        String mItem = menuOption2ResDataItem.getMItem();
-        if (mItem == null) {
-            mItem = "";
-        }
-        holder.menu_option2_tv.setText(mItem);
-
+        holder.menu_option2_tv.setText(menuOptionName);
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     holder.checkBox.setChecked(true);
+                    cartMenuOptionItem.setMenu_option_id(menuOptionId);
+                    cartMenuOptionItem.setMenu_option_name(menuOptionName);
+                    cartMenuOptionItem.setMenu_option_price(menuOptionPrice);
+
+                    cartMenuOptionList.add(cartMenuOptionItem);
+                    map.put(position, cartMenuOptionList);
+
                 }else {
                     holder.checkBox.setChecked(false);
+                    map.remove(position);
                 }
+
+                menuOptionActivity.setMenuOptionMap(map);
             }
         });
-
-        /*holder.checkBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (holder.checkBox.isChecked()) {
-                    holder.checkBox.setChecked(false);
-                }else {
-                    holder.checkBox.setChecked(true);
-                }
-            }
-        });*/
     }
 
     @Override
     public int getItemCount() {
-        if (this.list != null) {
+        if (list != null) {
             return list.size();
         } else {
             return 0;

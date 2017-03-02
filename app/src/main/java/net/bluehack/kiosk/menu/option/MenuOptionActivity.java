@@ -21,12 +21,19 @@ import net.bluehack.kiosk.ApplicationLoader;
 import net.bluehack.kiosk.R;
 import net.bluehack.kiosk.api.ApiClient;
 import net.bluehack.kiosk.api.net.NetworkManager;
+import net.bluehack.kiosk.cart.CartMenuActivity;
+import net.bluehack.kiosk.cart.CartMenuItem;
+import net.bluehack.kiosk.cart.CartMenuOptionItem;
+import net.bluehack.kiosk.cart.CartMenuRequireOptionItem;
 import net.bluehack.kiosk.menu.MenuActivity;
-import net.bluehack.kiosk.menu.MenuAdapter;
 import net.bluehack.kiosk.model.MenuOptionRes;
 import net.bluehack.kiosk.model.MenuOptionResDataItem;
+import net.bluehack.kiosk.util.KioskPreference;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 import static net.bluehack.kiosk.util.Logger.LOGD;
 import static net.bluehack.kiosk.util.Logger.LOGE;
@@ -48,6 +55,8 @@ public class MenuOptionActivity extends Activity {
     private ImageView menu_option_info_btn;
     private ImageView menu_option_ib_count_minus;
     private ImageView menu_option_ib_count_plus;
+    private ImageView menu_option_btn_cart;
+    private ImageView menu_option_btn_payment;
     private TextView menu_option_tv_count;
     private TextView menu_option_tv_title;
     private TextView menu_option_tv_price;
@@ -64,6 +73,10 @@ public class MenuOptionActivity extends Activity {
     private String menu_calory;
     private static int menu_option_count_sum = 0;
     private static boolean isVisibleMenuInfo = false;
+    private static HashMap<Integer, ArrayList<CartMenuOptionItem>> map = new HashMap<Integer, ArrayList<CartMenuOptionItem>>();
+    private static HashMap<Integer, ArrayList<CartMenuRequireOptionItem>> requiredMap = new HashMap<Integer, ArrayList<CartMenuRequireOptionItem>>();
+
+    public MenuOptionActivity (){}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +93,8 @@ public class MenuOptionActivity extends Activity {
         menu_option_info_btn            = (ImageView) findViewById(R.id.menu_option_info_btn);
         menu_option_ib_count_minus      = (ImageView) findViewById(R.id.menu_option_ib_count_minus);
         menu_option_ib_count_plus       = (ImageView) findViewById(R.id.menu_option_ib_count_plus);
+        menu_option_btn_cart            = (ImageView) findViewById(R.id.menu_option_btn_cart);
+        menu_option_btn_payment         = (ImageView) findViewById(R.id.menu_option_btn_payment);
         menu_option_tv_count            = (TextView) findViewById(R.id.menu_option_tv_count);
         menu_option_tv_title            = (TextView) findViewById(R.id.menu_option_tv_title);
         menu_option_tv_price            = (TextView) findViewById(R.id.menu_option_tv_price);
@@ -100,6 +115,7 @@ public class MenuOptionActivity extends Activity {
         menu_option2_rv_list.setLayoutManager(menuOption2layoutManager);
         menu_option2_rv_list.setAdapter(menuOption2Adapter);
 
+
         Intent intent = getIntent();
         menu_id             = intent.getExtras().getString("menu_id");
         menu_name           = intent.getExtras().getString("menu_name");
@@ -108,6 +124,14 @@ public class MenuOptionActivity extends Activity {
         menu_image          = intent.getExtras().getString("menu_image");
         menu_description    = intent.getExtras().getString("menu_description");
         menu_calory         = intent.getExtras().getString("menu_calory");
+
+        intent.removeExtra("menu_id");
+        intent.removeExtra("menu_name");
+        intent.removeExtra("menu_price");
+        intent.removeExtra("menu_point");
+        intent.removeExtra("menu_image");
+        intent.removeExtra("menu_description");
+        intent.removeExtra("menu_calory");
 
         Glide.with(context)
                 .load(menu_image)
@@ -120,7 +144,7 @@ public class MenuOptionActivity extends Activity {
 
         menu_option_tv_title.setText(menu_name);
         menu_option_tv_price.setText(menu_price + "$" + "(" + menu_point + "P" + ")");
-        menu_option_tv_calory.setText(menu_calory);
+        menu_option_tv_calory.setText(menu_calory + " Kcal");
         menu_option_tv_info.setText(menu_description);
         menu_option_tv_count.setText(String.valueOf(menu_option_count_sum));
 
@@ -158,7 +182,7 @@ public class MenuOptionActivity extends Activity {
         menu_option_ib_count_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (menu_option_count_sum > 99) {
+                if (menu_option_count_sum >= 99) {
                     menu_option_count_sum = 99;
                     menu_option_tv_count.setText(String.valueOf(menu_option_count_sum));
                 }else {
@@ -169,6 +193,57 @@ public class MenuOptionActivity extends Activity {
         });
 
         getMenuOptionlist(menu_id);
+
+        menu_option_btn_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //set cartMenuItem
+                Gson gson = new Gson();
+                CartMenuItem cartMenuItem = new CartMenuItem();
+                cartMenuItem.setMenu_id(menu_id);
+                cartMenuItem.setMenu_name(menu_name);
+                cartMenuItem.setMenu_image(menu_image);
+                cartMenuItem.setMenu_price(menu_price);
+                cartMenuItem.setMenu_point(menu_point);
+                cartMenuItem.setMenu_calory(menu_calory);
+                cartMenuItem.setMenu_description(menu_description);
+
+                //get checked menu option list
+                List<CartMenuOptionItem> cartMenuOptionItemList = new ArrayList<CartMenuOptionItem>();
+                HashMap<Integer, ArrayList<CartMenuOptionItem>> hashMap = getMenuOptionMap();
+                Iterator<Integer> iter = hashMap.keySet().iterator();
+                while(iter.hasNext()) {
+                    int key = iter.next();
+                    ArrayList<CartMenuOptionItem> valueList = hashMap.get(key);
+                    LOGD(TAG, "CartMenuOptionItem valueList => " + valueList.get(key).toString());
+                    cartMenuOptionItemList.add(valueList.get(key));
+                }
+                cartMenuItem.setCartMenuOptionItems(cartMenuOptionItemList);
+
+                //get checked menu required option list
+                List<CartMenuRequireOptionItem> cartMenuRequireOptionItemList = new ArrayList<CartMenuRequireOptionItem>();
+                HashMap<Integer, ArrayList<CartMenuRequireOptionItem>> requiredHashMap = getMenuRequiredOptionMap();
+                Iterator<Integer> requiredIter = requiredHashMap.keySet().iterator();
+                while(requiredIter.hasNext()) {
+                    int key = requiredIter.next();
+                    ArrayList<CartMenuRequireOptionItem> valueList = requiredHashMap.get(key);
+                    LOGD(TAG, "CartMenuRequireOptionItem valueList => " + valueList.get(key).toString());
+                    cartMenuRequireOptionItemList.add(valueList.get(key));
+                }
+                cartMenuItem.setCartMenuRequireOptionItems(cartMenuRequireOptionItemList);
+
+                //set menu info preference
+                String cartObject = gson.toJson(cartMenuItem);
+                KioskPreference.getInstance().setCartInfo(cartObject);
+
+                Toast.makeText(context, "add cart", Toast.LENGTH_SHORT).show();
+                //start cartActivity
+                Intent intent = new Intent(MenuOptionActivity.this, CartMenuActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void getMenuOptionlist(String menu_id) {
@@ -192,31 +267,39 @@ public class MenuOptionActivity extends Activity {
 
                                         LOGD(TAG, "login success!");
 
+                                        final ArrayList<MenuOptionResDataItem> menuOption1ResDataItems = new ArrayList<>();
+                                        final ArrayList<MenuOptionResDataItem> menuOption2ResDataItems = new ArrayList<>();
+
                                         menuOption1Adapter.clean();
                                         menuOption2Adapter.clean();
 
-                                        ArrayList<MenuOptionResDataItem> menuOption1ResDataItems = new ArrayList<>();
-                                        ArrayList<MenuOptionResDataItem> menuOption2ResDataItems = new ArrayList<>();
+                                        MenuOptionResDataItem menuOption1ResDataItem = new MenuOptionResDataItem();
+                                        MenuOptionResDataItem menuOption2ResDataItem = new MenuOptionResDataItem();
 
-                                        for (MenuOptionResDataItem item : menuOptionRes.getData()) {
-
-                                            MenuOptionResDataItem menuOption1ResDataItem = new MenuOptionResDataItem();
-                                            MenuOptionResDataItem menuOption2ResDataItem = new MenuOptionResDataItem();
-
-                                            //TODO: fixme => menu option에 관련된 타입이 fixed 될때 변경
-                                            LOGD(TAG,"item.getMType() = " + item.getMType());
-                                            if (item.getMType().equals("0")) {
+                                        if (menuOption1ResDataItems.size() != 0) {
+                                            menuOption1ResDataItems.clear();
+                                        }
+                                        if (menuOption2ResDataItems.size() != 0) {
+                                            menuOption2ResDataItems.clear();
+                                        }
+                                        //TODO: fixme => menu option에 관련된 타입이 fixed 될때 변경
+                                        for (int i = 0; i < menuOptionRes.getData().size(); i ++) {
+                                            if (menuOptionRes.getData().get(i).getMType().equals("0")) {
                                                 //type 1
-                                                menuOption1ResDataItem.setMItem(item.getMItem());
+                                                menuOption1ResDataItem.setMenuId(menuOptionRes.getData().get(i).getMenuId());
+                                                menuOption1ResDataItem.setMItem(menuOptionRes.getData().get(i).getMItem());
+                                                menuOption1ResDataItem.setPrice(menuOptionRes.getData().get(i).getPrice());
                                                 menuOption1ResDataItems.add(menuOption1ResDataItem);
 
-                                            }else if (item.getMType().equals("1")) {
+                                            } else if (menuOptionRes.getData().get(i).getMType().equals("1")) {
                                                 //type 2
-                                                menuOption2ResDataItem.setMItem(item.getMItem());
+                                                menuOption2ResDataItem.setMenuId(menuOptionRes.getData().get(i).getMenuId());
+                                                menuOption2ResDataItem.setMItem(menuOptionRes.getData().get(i).getMItem());
+                                                menuOption2ResDataItem.setPrice(menuOptionRes.getData().get(i).getPrice());
                                                 menuOption2ResDataItems.add(menuOption2ResDataItem);
                                             }
-
                                         }
+
                                         menuOption1Adapter.addItem(menuOption1ResDataItems);
                                         menuOption1Adapter.notifyDataSetChanged();
                                         menuOption2Adapter.addItem(menuOption2ResDataItems);
@@ -235,6 +318,22 @@ public class MenuOptionActivity extends Activity {
             //offline
             Toast.makeText(ApplicationLoader.getContext(),"check network status!",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public HashMap<Integer, ArrayList<CartMenuOptionItem>> getMenuOptionMap() {
+        return map;
+    }
+    public void setMenuOptionMap(HashMap<Integer, ArrayList<CartMenuOptionItem>> map) {
+        this.map = map;
+    }
+
+    public HashMap<Integer, ArrayList<CartMenuRequireOptionItem>> getMenuRequiredOptionMap() {
+        LOGE(TAG, "getMenuRequiredOptionMap() =>" + requiredMap);
+        return requiredMap;
+    }
+    public void setMenuRequiredOptionMap(HashMap<Integer, ArrayList<CartMenuRequireOptionItem>> requiredMap) {
+        LOGE(TAG, "setMenuRequiredOptionMap() =>" + requiredMap);
+        this.requiredMap = requiredMap;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package net.bluehack.kiosk.menu;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -70,7 +71,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder>{
                 intent.putExtra("menu_calory", menuResDataItem.getCalory());
 
                 context.startActivity(intent);
-                //((Activity) context).finish();
+                ((Activity) context).finish();
             }
         });
     }

@@ -50,7 +50,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryViewHold
                 intent.putExtra("sub_category_id", subcategoryResDataItem.getSubCategoryId());
                 intent.putExtra("sub_category_name", subcategoryResDataItem.getSubCategoryName());
                 context.startActivity(intent);
-                //((Activity) context).finish();
+                ((Activity) context).finish();
             }
         });
     }

@@ -60,6 +60,8 @@ public class MenuActivity extends Activity {
         Intent intent = getIntent();
         sub_category_id = intent.getExtras().getString("sub_category_id");
         sub_category_name = intent.getExtras().getString("sub_category_name");
+        intent.removeExtra("sub_category_id");
+        intent.removeExtra("sub_category_name");
         LOGE(TAG, "sub_category_id : " + sub_category_id);
         LOGE(TAG, "sub_category_name: " + sub_category_name);
 

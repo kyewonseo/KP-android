@@ -31,9 +31,9 @@
     <color name="color_17">#eaeaea</color>
     <color name="color_18">#6d6d6d</color>
     <color name="color_19">#ec4527</color>
+    <color name="color_20">#c3c3c3</color>
+    <color name="color_21">#c5c5c5</color>
 
-    <color name="color_20">#b9b9b9</color>
-    <color name="color_21">#d3d3d3</color>
     <color name="color_22">#eeeeee</color>
     <color name="color_23">#535353</color>
     <color name="color_24">#6a6a6a</color>
@@ -43,8 +43,12 @@
     <!--underline-->
     <color name="underline_01">#e5e5e5</color>
 
-    <!--btn_click_event-->
-    <drawable name="unchecked">#fd6246</drawable>
-    <drawable name="checked">#ec4527</drawable>
+    <!--btn type1 click event-->
+    <drawable name="type1_unchecked">#fd6246</drawable>
+    <drawable name="type1_checked">#d63417</drawable>
+
+    <!--btn type2 click event-->
+    <drawable name="type2_unchecked">#ec4527</drawable>
+    <drawable name="type2_checked">#d63417</drawable>
 
 </resources>

@@ -58,6 +58,12 @@
             android:label="@string/tool_bar_menu_option"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity
+            android:name=".cart.CartMenuActivity"
+            android:label="@string/tool_bar_cart_menu"
+            android:screenOrientation="portrait">
+        </activity>
         <!--<activity
             android:name=".order.OrderActivity"
             android:label="@string/tool_bar_order"

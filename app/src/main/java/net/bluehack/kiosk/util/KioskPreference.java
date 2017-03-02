@@ -7,7 +7,13 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
-import net.bluehack.kiosk.model.LoginResDataItem;
+import net.bluehack.kiosk.cart.CartMenuItem;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class KioskPreference {
 
@@ -17,6 +23,9 @@ public class KioskPreference {
     public static final String ACCOUNT_ID = "pref_account_id";
     public static final String STORE_ID = "pref_store_id";
     public static final String STORE_NAME = "pref_store_name";
+    public static final String CART_INFO = "pref_cart_info";
+
+    public static ArrayList<String> setCartMenuList = new ArrayList<String>();
 
     private static class SingletonHolder {
         static final KioskPreference INSTANCE = new KioskPreference();
@@ -94,6 +103,53 @@ public class KioskPreference {
     public void clearStoreName() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         sp.getString(STORE_NAME, null);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.clear();
+        editor.apply();
+    }
+
+    public ArrayList<CartMenuItem> getCartInfo() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        String cartList = sp.getString(CART_INFO, null);
+        final ArrayList<CartMenuItem>  getCartMenuList = new ArrayList<CartMenuItem>();
+        try {
+            JSONArray jsonArray = new JSONArray(cartList);
+            Gson gson = new Gson();
+            for (int i = 0; i <jsonArray.length(); i ++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                CartMenuItem item = gson.fromJson(jsonObject.toString(),CartMenuItem.class);
+                getCartMenuList.add(item);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return getCartMenuList;
+    }
+
+    public void setCartInfo(String cartMenuItem) {
+        setCartMenuList.add(cartMenuItem);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        sp.edit().putString(CART_INFO, setCartMenuList.toString()).apply();
+
+    }
+
+    public void deleteCartInfo(int index) {
+        ArrayList<CartMenuItem> cartMenuList = null;
+        cartMenuList = getCartInfo();
+
+        if (cartMenuList != null && cartMenuList.size() != 0) {
+            cartMenuList.remove(index);
+            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+            sp.edit().putString(CART_INFO, cartMenuList.toString()).apply();
+
+        }
+
+    }
+    //TODO: fixme => store가 바뀔때 clear
+    public void clearCartInfo() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        sp.getString(CART_INFO, null);
         SharedPreferences.Editor editor = sp.edit();
         editor.clear();
         editor.apply();
