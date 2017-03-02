@@ -71,7 +71,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder>{
                 intent.putExtra("menu_calory", menuResDataItem.getCalory());
 
                 context.startActivity(intent);
-                ((Activity) context).finish();
+                //((Activity) context).finish();
             }
         });
     }

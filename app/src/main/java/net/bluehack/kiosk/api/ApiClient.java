@@ -86,7 +86,7 @@ public class ApiClient {
                 SubcategoryRes output = null;
 
                 //TODO: fixme => sample data에서 store_id로 연결된 매핑데이터를 찾기 힘든점 때문에 "store_id" 값을 하드코딩하여 테스트함
-                output = client.categoriesSubcategoriesStoreIdGet("449", headerToken);
+                output = client.categoriesSubcategoriesStoreIdGet("asda-23891273-asdasf-123asd", headerToken);
 
                 listener.onResponse(output);
                 return null;

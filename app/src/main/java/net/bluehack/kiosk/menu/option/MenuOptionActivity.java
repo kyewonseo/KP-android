@@ -25,6 +25,7 @@ import net.bluehack.kiosk.cart.CartMenuActivity;
 import net.bluehack.kiosk.cart.CartMenuItem;
 import net.bluehack.kiosk.cart.CartMenuOptionItem;
 import net.bluehack.kiosk.cart.CartMenuRequireOptionItem;
+import net.bluehack.kiosk.main.MainActivity;
 import net.bluehack.kiosk.menu.MenuActivity;
 import net.bluehack.kiosk.model.MenuOptionRes;
 import net.bluehack.kiosk.model.MenuOptionResDataItem;
@@ -239,9 +240,18 @@ public class MenuOptionActivity extends Activity {
 
                 Toast.makeText(context, "add cart", Toast.LENGTH_SHORT).show();
                 //start cartActivity
+                //Intent intent = new Intent(MenuOptionActivity.this, CartMenuActivity.class);
+                //startActivity(intent);
+                //finish();
+            }
+        });
+
+        menu_option_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //start cartActivity
                 Intent intent = new Intent(MenuOptionActivity.this, CartMenuActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -284,7 +294,12 @@ public class MenuOptionActivity extends Activity {
                                         }
                                         //TODO: fixme => menu option에 관련된 타입이 fixed 될때 변경
                                         for (int i = 0; i < menuOptionRes.getData().size(); i ++) {
-                                            if (menuOptionRes.getData().get(i).getMType().equals("0")) {
+                                            //TODO: TEST VERSION
+                                            menuOption2ResDataItem.setMenuId(menuOptionRes.getData().get(i).getMenuId());
+                                            menuOption2ResDataItem.setMItem(menuOptionRes.getData().get(i).getMItem());
+                                            menuOption2ResDataItem.setPrice(menuOptionRes.getData().get(i).getPrice());
+                                            menuOption2ResDataItems.add(menuOption2ResDataItem);
+                                            /*if (menuOptionRes.getData().get(i).getMType().equals("0")) {
                                                 //type 1
                                                 menuOption1ResDataItem.setMenuId(menuOptionRes.getData().get(i).getMenuId());
                                                 menuOption1ResDataItem.setMItem(menuOptionRes.getData().get(i).getMItem());
@@ -297,7 +312,7 @@ public class MenuOptionActivity extends Activity {
                                                 menuOption2ResDataItem.setMItem(menuOptionRes.getData().get(i).getMItem());
                                                 menuOption2ResDataItem.setPrice(menuOptionRes.getData().get(i).getPrice());
                                                 menuOption2ResDataItems.add(menuOption2ResDataItem);
-                                            }
+                                            }*/
                                         }
 
                                         menuOption1Adapter.addItem(menuOption1ResDataItems);

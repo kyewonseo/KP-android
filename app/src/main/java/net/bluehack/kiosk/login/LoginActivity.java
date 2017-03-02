@@ -119,9 +119,12 @@ public class LoginActivity extends Activity {
                 LOGE(TAG, "loginReq info : " + loginIdText + "," + loginPwText);
 
                 loginReq = new LoginReq();
-                loginReq.setLoginId(loginIdText);
-                loginReq.setLoginPasswd(loginPwText);
+                //loginReq.setLoginId(loginIdText);
+                //loginReq.setLoginPasswd(loginPwText);
 
+                //TODO: fixme => TEST ACCOUNT LOGIN
+                loginReq.setLoginId("total_id1");
+                loginReq.setLoginPasswd("encryptionPwd");
                 doLogin(loginReq);
             }
         });

@@ -56,7 +56,6 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
                 .into(holder.imageView);
         holder.name.setText(storeItem.getStore());
         holder.address.setText(storeItem.getSAddress());
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,9 +64,13 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder>{
                 KioskPreference.getInstance().setStoreId(storeItem.getStoreId());
                 KioskPreference.getInstance().setStoreName(storeItem.getStore());
 
+                //TODO: TEST SOTREID
+                /*KioskPreference.getInstance().setStoreId("asda-23891273-asdasf-123asd");
+                KioskPreference.getInstance().setStoreName("porro");*/
+
                 Intent intent = new Intent(context, MainActivity.class);
                 context.startActivity(intent);
-                ((Activity) context).finish();
+                //((Activity) context).finish();
             }
         });
     }
