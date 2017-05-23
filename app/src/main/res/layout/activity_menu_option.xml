@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="missingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_01" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tool_bar_menu_option"
+            android:textSize="18sp"
+            android:textColor="@color/color_02"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignLeft="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:gravity="center|center_horizontal"
+            app:font="custom1" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/toolbar"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:paddingRight="@dimen/menu_item_img_right_padding"
+            android:paddingTop="@dimen/menu_item_img_top_padding">
+
+            <ImageView
+                android:id="@+id/menu_option_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/subcategory_toolbar_iv_left_padding"
+                android:src="@drawable/btn_menu_cart" />
+
+            <TextView
+                android:id="@+id/menu_cart_tv"
+                android:layout_width="7.5dp"
+                android:layout_height="7.5dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="@dimen/cart_btn_tv_top_margin"
+                android:layout_marginRight="@dimen/cart_btn_tv_right_margin"
+                android:gravity="center"
+                android:background="@drawable/bg_num_round_01"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_08"
+            android:layout_alignBottom="@id/toolbar" />
+
+        <include layout="@layout/content_menu_option" />
+
+        <include layout="@layout/bottom_menu_option_btn" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_45"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/progress_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/progress_img_bottom_margin" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_loading"
+                android:textColor="@color/color_03"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

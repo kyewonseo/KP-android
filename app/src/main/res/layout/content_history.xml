@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_04">
+
+        <ListView
+            android:id="@+id/lvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_12"
+            android:dividerHeight="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/llNoneHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="163dp"
+                android:background="@drawable/img_non_history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/color_20"
+                android:textStyle="bold"
+                android:text="@string/txt_none_history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/color_20"
+                android:textStyle="bold"
+                android:text="@string/txt_introduce_payment" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTicketMenu"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15.5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tvDish"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15.5dp"
+            android:background="@drawable/img_menu_sample_a_01" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:layout_marginLeft="12dp">
+
+            <TextView
+                android:id="@+id/tvDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_05"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="TOOWOOMBA PASTA" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:textColor="@color/color_10"
+                android:textSize="14sp"
+                android:text="1,300$ (130P)" />
+
+            <ListView
+                android:id="@+id/lvOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivAddCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_re_cart" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15.5dp" />
+</LinearLayout>

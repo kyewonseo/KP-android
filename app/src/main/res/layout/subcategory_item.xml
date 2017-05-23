@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="0dp"
+        card_view:cardUseCompatPadding="false"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/subcategory_cv_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/subcategory_item_text_name_left_margin"
+                android:gravity="start|center"
+                android:textColor="@color/color_13"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:paddingRight="@dimen/subcategory_item_iv_right_padding">
+
+                <ImageView
+                    android:id="@+id/subcategory_cv_iv_btn"
+                    android:layout_width="8.7dp"
+                    android:layout_height="16.2dp"
+                    android:background="@drawable/img_arrow_enter" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_12"
+            android:layout_gravity="bottom" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

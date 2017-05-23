@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llHomeRecentlyOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_28"
+        android:gravity="center_vertical"
+        android:minHeight="40.5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Order"
+            android:textColor="@color/color_13"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOtherView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="13dp"
+            android:text="@string/home_other_view"
+            android:textColor="@drawable/btn_view_all"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <!--divider-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_04" />
+
+    <ListView
+        android:id="@+id/lvRecentlyOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/color_12"
+        android:dividerHeight="0.5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" />
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_08"/>-->
+
+</LinearLayout>

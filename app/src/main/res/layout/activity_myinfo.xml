@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="missingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_01" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tool_bar_myinfo"
+            android:textSize="18sp"
+            android:textColor="@color/color_02"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignLeft="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:gravity="center|center_horizontal"
+            app:font="custom1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_08"
+            android:layout_alignBottom="@id/toolbar" />
+
+        <include layout="@layout/content_myinfo" />
+
+    </RelativeLayout>
+</LinearLayout>

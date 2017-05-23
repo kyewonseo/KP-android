@@ -4,7 +4,10 @@ import android.util.Log;
 
 public class Logger {
 
-    public Logger(){};
+    public Logger() {
+    }
+
+    ;
     private static final String LOG_PREFIX = "kiosk_";
     private static final int LOG_PREFIX_LENGTH = LOG_PREFIX.length();
     private static final int MAX_LOG_TAG_LENGTH = 23;

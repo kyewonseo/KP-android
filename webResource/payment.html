@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" id="clearent-hpp"
+            src="https://hpp-sb.clearent.net/js/clearent.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+    <title>clearent payment</title>
+
+    <script>
+        
+        var onloadCallback = function() {
+
+            setTimeout(function(){
+                Clearent.payButton({
+                    "pk": getQuerystring('pk'),
+                    "amount": getQuerystring('amount')
+                });
+
+
+                observer.observe(document.body, {
+                    childList: true
+                    , subtree: false
+                    , attributes: false
+                    , characterData: false
+                });
+            }, 300);
+
+        };
+
+
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (!mutation.addedNodes) {
+                    console.log("no AddedNodes");
+                    return;
+                }
+
+                for (var i = 0; i < mutation.addedNodes.length; i++) {
+                    // do things to your newly added nodes here
+                    var node = mutation.addedNodes[i];
+                    console.log("NO : " + i);
+                    console.log("node : " + node);
+                    if (node.className == 'Clearent') {
+                        console.log(node);
+                        $('#Clearent-pay-now').click();
+                        observer.disconnect();
+                    }
+
+                    /*if (i == mutation.addedNodes.length -1) {
+                     observer.disconnect();
+                     }*/
+                }
+            })
+        });
+
+        function getQuerystring(paramName) {
+            var _tempUrl = window.location.search.substring(1);
+            var _tempArray = _tempUrl.split('&');
+            for (var i = 0; _tempArray.length; i++) {
+                var _keyValuePair = _tempArray[i].split('=');
+                if (_keyValuePair[0] == paramName) {
+                    return _keyValuePair[1];
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+
+    // called after successful complete
+    function ClearentOnSuccess(responseJSON){
+        console.log("transaction successful");
+        console.log(responseJSON);
+        AndroidBridge.showResponse(JSON.parse(responseJSON).code);
+        //alert('Payment success :' + JSON.parse(responseJSON).code);
+    }
+
+    // called after failed complete
+    function ClearentOnError(responseJSON){
+        console.log("transaction failed");
+        console.log(responseJSON);
+        AndroidBridge.showResponse(JSON.parse(responseJSON).code);
+        //alert('Payment failed :' + JSON.parse(responseJSON).code);
+        /*$.ajax({
+            url : '/payment_result',
+            type : 'POST',
+            dataType: 'JSON',
+            data : responseJSON,
+            success : function(data) {
+
+                console.log('Payment code :' + JSON.parse(responseJSON).payload);
+                console.log('Payment responseJSON :' + responseJSON);
+
+                alert('Payment failed :' + JSON.parse(responseJSON).code);
+            },
+            error : function(e){
+                console.log(e.responseText);
+            }
+        });*/
+    }
+
+    // called after popup opened
+    function ClearentOnPopupOpened() {
+        console.log("amount : " + getQuerystring('amount'));
+        $('#Clearent-exp-date').keyup(function () {
+            setTimeout((function (el) {
+                var strLength = el.value.length;
+                return function () {
+                    if (el.setSelectionRange !== undefined) {
+                        el.setSelectionRange(strLength, strLength);
+                    } else {
+                        $(el).val(el.value);
+                    }
+                }
+            }(this)), 0);
+        });
+    }
+
+    // called after popup closed
+    function ClearentOnPopupClosed(firstClose){
+        console.log("First time closed? : " + firstClose);
+        AndroidBridge.clearentCancel();
+    }
+
+</script>
+</body>
+</html>

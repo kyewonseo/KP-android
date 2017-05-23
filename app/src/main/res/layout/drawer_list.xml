@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="missingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/nav_item_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/nav_my_info"
+            style="@style/drawer_list_item"
+            app:font="custom1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/drawer_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/nav_store"
+            app:font="custom1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/nav_history"
+            style="@style/drawer_list_item"
+            app:font="custom1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/nav_cart"
+            style="@style/drawer_list_item"
+            app:font="custom1" />
+
+        <TextView
+            android:id="@+id/menu_cart_tv"
+            android:layout_width="7.5dp"
+            android:layout_height="7.5dp"
+            android:layout_gravity="start|top"
+            android:layout_marginLeft="@dimen/cart_btn_tv_left_margin"
+            android:background="@drawable/bg_num_round_01"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/nav_contact_us"
+            style="@style/drawer_list_item"
+            app:font="custom1" />
+
+    </LinearLayout>
+</LinearLayout>

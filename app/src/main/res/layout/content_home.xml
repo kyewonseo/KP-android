@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="missingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="@android:color/white">
+
+    <!--store information-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ivStoreLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/store_name"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/color_13"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvStoreAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.5dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_10"
+                android:text="@string/store_address" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--divider-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_17" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40.5dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/img_main_point" />
+
+        <TextView
+            android:id="@+id/tvGiftPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.5dp"
+            android:text="42,000P" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivChangeStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_main_storechange" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/color_04" />
+
+    <!--divider-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/mobilepayment_intro" />
+
+        <include layout="@layout/home_recently_order" />
+    </FrameLayout>
+
+    <!--//////////////////-->
+
+    <!--divider-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/color_04" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvMobileOrder"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:minHeight="73dp"
+            android:background="@drawable/btn_type1_click_event"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:text="@string/home_mobile_other"
+            app:font="custom1" />
+    </FrameLayout>
+
+</LinearLayout>

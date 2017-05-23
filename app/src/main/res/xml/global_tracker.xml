@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="ga_trackingId"
+        translatable="false">UA-99305451-1
+    </string>
+
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">60</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- https://developers.google.com/analytics/devguides/collection/android/v4/exceptions -->
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+</resources>

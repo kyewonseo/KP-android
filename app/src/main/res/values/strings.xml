@@ -1,113 +1,208 @@
 <resources>
-    <string name="app_name">kiosk</string>
+    <string name="app_name">Digital Checkouts</string>
 
     <!--tool_bar_name-->
     <string name="tool_bar_login">LOGIN</string>
-    <string name="tool_bar_main">KIOSK CAFE</string>
     <string name="tool_bar_store">STORE</string>
-    <string name="tool_bar_order">MOBILE ORDER</string>
-    <string name="tool_bar_order_pay">PAYMENT</string>
-    <string name="tool_bar_order_option">ORDER</string>
+    <string name="tool_bar_payment">PAYMENT</string>
+    <string name="tool_bar_myinfo">MY INFO</string>
+    <string name="tool_bar_subcategory">MENU</string>
+    <string name="tool_bar_menu_option">OPTION</string>
+    <string name="tool_bar_cart_menu">CART</string>
+    <string name="tool_bar_ticket">HISTORY ORDER</string>
+
+
+    <string name="tool_bar_home">KIOSK HOME</string>
+    <string name="tool_bar_home_title">HOME</string>
 
     <!--drawer_header-->
-    <string name="drawer_header_txt_01">WELCOME</string>
-    <string name="drawer_header_txt_02">KIOSK CAFE</string>
 
     <!--drawer_list_item-->
-    <string name="nav_item_01">Store</string>
-    <string name="nav_item_02">Notice</string>
-    <string name="nav_item_03">Info</string>
-    <string name="nav_item_04">Setting</string>
-    <string name="nav_item_05">F&amp;Q</string>
 
     <!--content_login-->
     <string name="login_id">ID</string>
     <string name="login_passwd">PW</string>
-    <string name="login_text_id">Write your ID</string>
-    <string name="login_text_passwd">Write your Password</string>
     <string name="login_btn">login</string>
     <string name="login_description_type1">*</string>
-    <string name="login_description_type2">회원가입은 해당 매장의 키오스크를 통해 진행하실 수 있습니다.</string>
 
     <!--content_main-->
-    <string name="content_main_notice_title">notice</string>
-    <string name="content_main_notice_text">special event 2017. bread 1+1</string>
-    <string name="content_main_mobile_order_title">Mobile order</string>
-    <string name="context_main_mobile_order_text">Click to start ordering</string>
-    <string name="content_main_recent_menu_title">Recent menu</string>
-    <string name="content_main_recent_menu_text_01">Dark Mocha</string>
-    <string name="content_main_recent_menu_text_02">Cappuccino</string>
-    <string name="content_main_recent_menu_text_03">Cold Brew</string>
-    <string name="content_main_recent_menu_text_04">Mango \n
-        Banana</string>
-    <string name="content_main_coupon_title">Coupon</string>
-    <string name="content_main_Membership_title">Membership</string>
+
+    <!--kiosk home layout-->
+    <string name="home_intro_message">Quickly and easily with mobile order</string>
+    <string name="home_intro_sub_message">You can order anywhere, anytime.</string>
 
     <!--kiosk-store-->
-    <string name="store_recommend_title">추천 매장</string>
 
     <!--kiosk order-->
-    <string name="order_map_name">정자점</string>
-    <string name="order_map_name_hint">(현재 설정매정)</string>
-    <string name="order_map_btn">변경</string>
 
     <!--kiosk order pay-->
-    <string name="pay_order_title_01">주문메뉴</string>
-    <string name="pay_order_title_02">주문매장</string>
-    <string name="pay_order_title_03">쿠폰</string>
-    <string name="pay_order_title_04">결제수단</string>
-    <string name="pay_order_title_05">상세내역</string>
-    <string name="pay_order_title_06">결제</string>
     <string name="pay_order_menu_name">Cold Brew</string>
-    <string name="pay_order_menu_heat">Hot</string>
-    <string name="pay_order_menu_slash">/</string>
-    <string name="pay_order_menu_size">Small</string>
-    <string name="pay_order_menu_price">5,000</string>
-    <string name="pay_order_menu_price_unit">KRW</string>
     <string name="pay_order_menu_count">1</string>
-    <string name="pay_order_place_distance">623 m</string>
-    <string name="pay_order_place_address">경기도 성남시 분당구 정자일로 166,SPG센터 (정자동)</string>
-    <string name="pay_order_kind_paypal">Paypal</string>
-    <string name="pay_order_kind_card">신용카드</string>
-    <string name="pay_order_details">상세내역</string>
-    <string name="pay_order_sub_total">Subtotal</string>
-    <string name="pay_order_tax">Tax</string>
-    <string name="pay_order_total">Total</string>
     <string name="pay_order_price">5,000 KRW</string>
 
-    <!--kiosk order option-->
-    <string name="option_order_title_01">Product</string>
-    <string name="option_order_title_02">Type</string>
-    <string name="option_order_title_03">Size</string>
-    <string name="txt_option_order_type_hot">Hot</string>
-    <string name="txt_option_order_type_ice">Ice</string>
-    <string name="txt_option_order_size_small">Small</string>
-    <string name="txt_option_order_size_mediuam">Mediuam</string>
-    <string name="txt_option_order_size_large">Large</string>
-    <string name="txt_option_order_put">담기</string>
-    <string name="txt_option_order_now">바로주</string>
+    <!--kiosk sub category-->
+    <string name="subcategory_not_found_list">Failed to read menu information</string>
+
+    <!--kiosk menu-->
+    <string name="menu_not_found_list">Failed to read menu information</string>
+
+    <!--kiosk menu option-->
+    <string name="menu_option_tv_info">Description</string>
+    <string name="menu_option_tv_calory">Calories</string>
+    <string name="menu_option_tv_count">Quantity</string>
+    <string name="menu_option_tv_cart">ADD CART</string>
+    <string name="menu_option_tv_payment">ORDER</string>
+    <string name="menu_option_not_found_menu">Failed to read menu information</string>
 
     <!--kiosk process main-->
-    <string name="txt_process_name_01">A-01</string>
-    <string name="txt_process_name_02">(order)</string>
     <string name="txt_process_status_payment">Payment</string>
-    <string name="txt_process_status_receive_01">Receive</string>
-    <string name="txt_process_status_receive_02">order</string>
-    <string name="txt_process_status_making">Making</string>
-    <string name="txt_process_status_complete">Complete</string>
+    <string name="txt_process_status_receive_01">Prepare</string>
+    <string name="txt_process_status_making">In Cook</string>
+    <string name="txt_process_status_complete">Ready</string>
 
     <!-- kiosk store location -->
     <string name="txt_store_name">스타벅스 정자점</string>
     <string name="txt_store_address">경기도 성남시 분당구 정자일로 166,SPG센터 (정자동)</string>
-    <string name="txt_store_yd">52 yd</string>
-
-    <string name="txt_order_catalog_name_01">Coffee</string>
-    <string name="txt_order_catalog_name_02">Set menu</string>
-    <string name="txt_order_catalog_name_03">Hamburger</string>
-    <string name="txt_order_catalog_name_04">Sandwich</string>
 
     <!--kiosk order menu-->
-    <string name="txt_order_menu_name">Cappuccino</string>
-    <string name="txt_order_menu_price">5,000 KRW</string>
 
+    <!--kiosk myinfo-->
+    <string name="myinfo_text_id">ID</string>
+    <string name="myinfo_text_name">NAME</string>
+    <string name="myinfo_text_phone">PHONE</string>
+    <string name="myinfo_text_point">POINT</string>
+    <string name="myinfo_btn_text">LOG OUT</string>
+    <string name="home_other_view"><![CDATA[View All >]]></string>
+    <string name="home_mobile_other">MOBILE ORDER</string>
+
+
+    <!--dummy data-->
+    <string name="store_name">Cesar Chavez and Broadway</string>
+    <string name="store_address">639 N Broadway Los angeles, CA 90012</string>
+
+    <!--kiosk cart menu-->
+    <string name="cart_menu_tv_01">Cart is empty</string>
+    <string name="cart_menu_tv_02">Put your items in a cart</string>
+    <string name="cart_menu_tv_title_01">Description</string>
+    <string name="cart_menu_tv_title_02">Point</string>
+    <string name="cart_menu_tv_title_03">Payment</string>
+    <string name="cart_menu_btn_title">ORDER</string>
+    <string name="txt_date">Date</string>
+    <string name="txt_store">Store</string>
+    <string name="txt_menu">Menu</string>
+    <string name="txt_point">Point</string>
+    <string name="txt_method_payment">Payment methods</string>
+    <string name="txt_reorder">REORDER</string>
+    <string name="order_history">ORDER HISTORY</string>
+    <string name="txt_none_history">현재 주문 내역이 없습니다.</string>
+    <string name="txt_introduce_payment">키오스크 주문으 첫 주문을 \n시도해보세요</string>
+    <string name="contact">CONTACT US</string>
+    <string name="contact_us">Please contact us if you have any problem or questions</string>
+    <string name="nav_my_info">MY INFO</string>
+    <string name="nav_store">STORE</string>
+    <string name="nav_history">ORDER HISTORY</string>
+    <string name="nav_cart">CART</string>
+    <string name="nav_contact_us">CONTACT US</string>
+    <string name="add_cart">Menu has been added to your cart.</string>
+    <string name="cart_delete">The menu has been removed.</string>
+
+    <!--kiosk payment-->
+    <string name="payment_btn_title">Payment</string>
+    <string name="payment_menu_tv_title">Menu</string>
+    <string name="payment_store_tv_title">Store</string>
+    <string name="payment_methodofpayment_tv_title">Payment methods</string>
+    <string name="payment_detail_tv_title">Payment Details</string>
+    <string name="payment_radio_tv">Card</string>
+    <string name="payment_checkbox_tv">Use points</string>
+    <string name="payment_usepoint_tv">Point</string>
+    <string name="payment_details_tv_title_01">Subtotal</string>
+    <string name="payment_details_tv_title_02">Use points</string>
+    <string name="payment_details_tv_title_03">Tax</string>
+    <string name="payment_point_over">You don’t have enough points</string>
+
+    <!--kiosk progress bar-->
+    <string name="progress_loading">Loading...</string>
+    <string name="progress_wait_01">* Please wait until loading is</string>
+    <string name="progress_wait_02">complete</string>
+
+    <!--popup-->
+    <string name="popup_payment_success_title">Complete Payment</string>
+    <string name="popup_payment_success_message">Thank you for your payment</string>
+    <string name="popup_payment_success_sub_message_01">You’v got</string>
+    <string name="popup_payment_success_sub_message_02">points</string>
+    <string name="popup_payment_success_left_btn">OK</string>
+
+    <string name="popup_payment_error_title">PAYMENT ERROR</string>
+    <string name="popup_payment_error_message">We apologize for the inconvenience.</string>
+    <string name="popup_payment_error_sub_message">Please retry after a moment If the problem persists, contact  the support team for assistance.</string>
+    <string name="popup_payment_error_left_btn">Cancel</string>
+    <string name="popup_payment_error_right_btn">Retry</string>
+
+    <string name="popup_can_not_order_title">Can Not Order</string>
+    <string name="popup_can_not_order_message">Sorry.</string>
+    <string name="popup_can_not_order_sub_message">You can not order this menu at this time. \n Please choose other menus.</string>
+    <string name="popup_can_not_order_left_btn">OK</string>
+
+    <string name="popup_payment_confirm_title">CONFIRM PAYMENT</string>
+    <string name="popup_payment_confirm_message">Would you like to pay for this order at</string>
+
+
+    <string name="popup_select_store_title">SELECT STORE</string>
+    <string name="popup_select_store_message">Would you like to select a "</string>
+    <string name="popup_select_store_sub">"?</string>
+
+    <string name="popup_complete_title">COMPLETE</string>
+    <string name="popup_complete_message_01">Your order </string>
+    <string name="popup_complete_message_02"> is ready.</string>
+    <string name="popup_complete_left_btn">OK</string>
+
+    <string name="popup_sold_out_title">SOLD OUT</string>
+    <string name="popup_sold_out_left_btn">OK</string>
+
+    <string name="popup_store_error_title">ERROR</string>
+    <string name="popup_store_error_message">Failed to get store list.</string>
+    <string name="popup_store_error_sub">Please try again.</string>
+    <string name="popup_store_error_right_btn">Retry</string>
+
+    <string name="popup_server_error_title">SERVER ERROR</string>
+    <string name="popup_server_error_message">The service is temporarily \n unavailavle.</string>
+    <string name="popup_server_error_sub">Please try agin later.</string>
+    <string name="popup_server_error_left_btn">OK</string>
+
+    <string name="popup_quit_title">QUIT</string>
+    <string name="popup_quit_message">Do you want to quit</string>
+    <string name="popup_quit_sub">App?</string>
+    <string name="popup_quit_left_btn">NO</string>
+    <string name="popup_quit_right_btn">YES</string>
+
+    <!--kiosk network-->
+    <string name="network_status">You don’t have internet connection. \n Please check.</string>
+
+    <!--kiosk login-->
+    <string name="login_enter_id">Please enter your ID</string>
+    <string name="login_enter_pw">Please enter your password</string>
+    <string name="login_failed"> Login Failed. \n (Check your credential)</string>
+    <string name="login_message">You can register at local store. Use Kiosk.</string>
+
+    <!--kiosk history-->
+    <string name="history_empty_title">Your order is empty</string>
+    <string name="history_empty_message">Make your first order with mobile.</string>
+
+    <!--sold out toast-->
+    <string name="soldout_menu_removed">The menu has been removed.</string>
+    <string name="soldout_choose_other_menus">Please choose other menus.</string>
+
+    <string name="ticket_sold_out">SOLD - OUT</string>
+
+    <!--push notification status-->
+    <string name="push_prepare_01">Your order </string>
+    <string name="push_prepare_02"> is being prepared</string>
+    <string name="push_in_cook">Cooking your order </string>
+    <string name="push_ready_01">Your order </string>
+    <string name="push_ready_02"> is ready</string>
+
+    <!--payment methods-->
+    <string name="payment_methods_card">Card</string>
+    <string name="payment_methods_point">Point</string>
+    <string name="payment_methods_card_and_point">Card + Point</string>
 </resources>
